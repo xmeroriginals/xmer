@@ -1,567 +1,665 @@
-<!DOCTYPE html>
-<html lang="en" class="smooth-scroll">
+<html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>XmerOriginals | Digital Freedom and Ethical Technology</title>
-    <link rel="shortcut icon" href="https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png"
-        type="image/x-icon">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>XmerOriginals | Future of Digital Freedom</title>
+  <link rel="shortcut icon" href="https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png"
+    type="image/x-icon" />
 
-    <script src="lib/tailwind.js"></script>
-    <link rel="stylesheet" href="src/style.css">
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#111827",
-                        "primary-dark": "#f9fafb",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.5rem",
-                        "full": "9999px"
-                    },
-                },
+  <script src="lib/tailwind.js"></script>
+  <link rel="stylesheet" href="src/style.css" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#111827",
+            "primary-dark": "#f3f4f6",
+            accent: "#3b82f6",
+            "background-light": "#f8fafc",
+            "background-dark": "#0f172a",
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            body: ["Lexend Deca", "sans-serif"],
+          },
+          borderRadius: {
+            xl: "1rem",
+            "2xl": "1.5rem",
+            "3xl": "2rem",
+          },
+          animation: {
+            blob: "blob 7s infinite",
+            "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+          },
+          keyframes: {
+            blob: {
+              "0%": { transform: "translate(0px, 0px) scale(1)" },
+              "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+              "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+              "100%": { transform: "translate(0px, 0px) scale(1)" },
             },
-        };
-    </script>
-
-    <meta name="description"
-        content="XmerOriginals — Open-source projects and tools that promote digital freedom, privacy and ethical technology. Join, donate or contribute to build a privacy-respecting internet." />
-    <meta name="keywords" content="digital freedom, privacy, ethical technology, open source, decentralized, Xmer" />
-    <meta name="author" content="XmerOriginals" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://xmeroriginals.com/" />
-
-    <meta property="og:site_name" content="XmerOriginals" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="XmerOriginals | Digital Freedom and Ethical Technology" />
-    <meta property="og:description"
-        content="Open-source projects and tools that promote digital freedom, privacy and ethical technology." />
-    <meta property="og:url" content="https://xmeroriginals.com/" />
-    <meta property="og:image"
-        content="https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@xmerdet" />
-    <meta name="theme-color" content="#111827" />
-
-    <link rel="alternate" href="https://xmeroriginals.com/" hreflang="en" />
-    <link rel="alternate" href="https://xmeroriginals.com/tr/" hreflang="tr" />
-
-    <link rel="preconnect" href="https://xmeroriginals.github.io" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://xmeroriginals.com/#organization",
-      "name": "XmerOriginals",
-      "url": "https://xmeroriginals.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png",
-        "width": 512,
-        "height": 512
+            fadeInUp: {
+              "0%": { opacity: "0", transform: "translateY(20px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
+          },
+        },
       },
-      "sameAs": [
-        "https://www.instagram.com/xmerdet"
-      ],
-      "contactPoint": [
+    };
+  </script>
+  <meta name="description"
+    content="XmerOriginals — Building a privacy-respecting internet through open-source innovation." />
+  <meta name="keywords" content="digital freedom, privacy, ethical technology, open source, decentralized, Xmer" />
+  <meta name="author" content="XmerOriginals" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://xmeroriginals.com/" />
+  <meta property="og:site_name" content="XmerOriginals" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="XmerOriginals | Digital Freedom and Ethical Technology" />
+  <meta property="og:description"
+    content="Open-source projects and tools that promote digital freedom, privacy and ethical technology." />
+  <meta property="og:url" content="https://xmeroriginals.com/" />
+  <meta property="og:image" content="https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@xmerdet" />
+  <meta name="theme-color" content="#111827" />
+  <link rel="alternate" href="https://xmeroriginals.com/" hreflang="en" />
+  <link rel="alternate" href="https://xmeroriginals.com/" hreflang="tr" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
         {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "email": "support@xmeroriginals.com",
-          "url": "https://xmeroriginals.com/#contact"
+          "@type": "Organization",
+          "name": "XmerOriginals",
+          "url": "https://xmeroriginals.com",
+          "logo": "https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png",
+          "sameAs": [
+            "https://www.instagram.com/xmerdet",
+            "https://buymeacoffee.com/xmer"
+          ]
         },
         {
-          "@type": "ContactPoint",
-          "contactType": "press",
-          "email": "press@xmeroriginals.com",
-          "url": "https://xmeroriginals.com/#contact"
+          "@type": "WebSite",
+          "name": "XmerOriginals",
+          "url": "https://xmeroriginals.com",
+          "description": "Building the future of privacy with open-source technology."
         }
-      ],
-      "description": "XmerOriginals develops open-source projects and tools that promote digital freedom, privacy, and ethical technology. We are a community-driven organization relying on donations and volunteer support."
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://xmeroriginals.com/#website",
-      "url": "https://xmeroriginals.com/",
-      "name": "XmerOriginals",
-      "description": "Open-source projects and tools that promote digital freedom, privacy and ethical technology. Join, donate or contribute to build a privacy-respecting internet.",
-      "publisher": {
-        "@id": "https://xmeroriginals.com/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://xmeroriginals.com/search?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://xmeroriginals.com/#webpage",
-      "url": "https://xmeroriginals.com/",
-      "name": "XmerOriginals | Digital Freedom and Ethical Technology",
-      "isPartOf": {
-        "@id": "https://xmeroriginals.com/#website"
-      },
-      "about": {
-        "@id": "https://xmeroriginals.com/#organization"
-      },
-      "description": "Open-source projects and tools that promote digital freedom, privacy and ethical technology. Join, donate or contribute to build a privacy-respecting internet.",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://xmeroriginals.com/"
-          }
-        ]
-      }
+      ]
     }
-  ]
-}
-</script>
+    </script>
 </head>
 
 <body>
-    <div id="loader">
-        <div class="loader-logo" role="img" aria-label="Xmer logo">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0,0,500.20997,499.99999" fill="#ffffff">
-                <g transform="translate(10,70)">
-                    <g stroke="none" stroke-miterlimit="10">
-                        <path
-                            d="M305.05393,-3.27944l-66.7189,-66.72056h57.02808l194.62582,194.6236l-0.00001,57.03417l-95.50675,-95.51117l11.34305,-11.35302l11.3425,-11.35246h-45.3949l-66.7189,-66.72056z" />
-                        <path d="M489.98893,91.40451l-161.40119,-161.40451h60.34916l101.05202,101.0476z" />
-                        <path d="M489.98892,1.15347l-71.14682,-71.15346h64.25771l3.53038,3.56249l3.53093,3.56249z" />
-                        <path
-                            d="M489.98894,271.90993l-140.64252,-140.64584l13.29206,-13.28376l13.29206,-13.28321l114.05838,114.05396z" />
-                        <path
-                            d="M489.98892,362.16209l-185.76332,-185.76554l24.63844,-24.63844l80.56245,80.56134l80.56245,80.56078z" />
-                        <path
-                            d="M-9.4463,178.88928l47.61633,47.61412l47.61578,47.61356l-11.20518,11.21514l-11.20573,11.2157h44.8412l133.4378,133.44112h-57.02808l-194.07212,-194.0699z" />
-                        <path
-                            d="M150.84694,23.01898l-93.01787,-93.01898h49.27964l161.40506,161.40838l-12.3242,12.31479l-12.3242,12.31534z" />
-                        <path
-                            d="M223.93502,256.68379c6.69586,-6.70085 12.30095,-12.18356 12.45653,-12.18356c0.15504,0 42.01623,41.73496 93.02507,92.74435l92.74324,92.74435h-49.27964l-161.1188,-161.12212l12.1736,-12.18301z" />
-                        <path
-                            d="M-9.4463,23.0223v-24.63954l185.48482,185.4826l-12.31534,12.3242l-12.31479,12.3242l-160.85468,-160.85136v-24.6401z" />
-                        <path
-                            d="M-9.4463,299.31796v-30.17652l80.28726,80.28504l80.2867,80.2856l-30.03311,0.14341l-30.03256,0.14285l-50.25415,-50.25138l-50.25415,-50.25193v-30.17707z" />
-                        <path
-                            d="M148.08121,-70h53.15608l133.4378,133.44112h-38.03404l-3.84654,3.7131l-3.84598,3.7131z" />
-                        <path
-                            d="M187.67779,292.94102l3.57467,-3.60679l140.38116,140.37784l-26.43463,0.14396l-26.43408,0.14396l-133.4522,-133.4522h38.79039l3.57467,-3.60679z" />
-                        <path
-                            d="M-9.4463,88.63491l140.35792,140.35792l-13.28376,13.29206l-13.28376,13.29262l-113.7904,-113.78596z" />
-                        <path
-                            d="M490.20154,423.20614l-0.34606,6.7828h-23.39705l-66.30584,-66.30418c-36.46874,-36.46763 -66.55643,-66.74192 -66.55643,-66.9706c0,-0.22923 10.64959,-0.16634 23.36027,-0.16634h23.11023l109.92226,109.90122c0,0 0.27181,15.59796 0.21262,16.7571z" />
-                        <path
-                            d="M-10,-58.23282v-11.76718h23.53381l133.4378,133.44112h-47.06042l-109.91118,-109.90676v-11.76718z" />
-                        <path
-                            d="M-9.4463,359.39581l70.32292,70.31628l-31.95721,0.14285l-31.95666,0.14285l-3.2048,-3.17047l-3.20425,-3.17103z" />
-                    </g>
-                </g>
-            </svg>
-        </div>
-
-        <div class="loader-bottom">
-            <div class="line-loader"></div>
-            <div style="justify-content: center; text-align: center">
-                <div class="loader-XF">
-                    <span class="loader-From">from</span>
-                    <span class="loader-Xmer">Xmer™</span>
-                </div>
-                <span class="loader-Alt">© 2025 Xmer. All Rights Reserved.</span>
-            </div>
-        </div>
+  <div id="loader">
+    <div class="loader-logo">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0,0,500.20997,499.99999" fill="#ffffff">
+        <g transform="translate(10,70)">
+          <g stroke="none" stroke-miterlimit="10">
+            <path
+              d="M305.05393,-3.27944l-66.7189,-66.72056h57.02808l194.62582,194.6236l-0.00001,57.03417l-95.50675,-95.51117l11.34305,-11.35302l11.3425,-11.35246h-45.3949l-66.7189,-66.72056z" />
+            <path d="M489.98893,91.40451l-161.40119,-161.40451h60.34916l101.05202,101.0476z" />
+            <path d="M489.98892,1.15347l-71.14682,-71.15346h64.25771l3.53038,3.56249l3.53093,3.56249z" />
+            <path
+              d="M489.98894,271.90993l-140.64252,-140.64584l13.29206,-13.28376l13.29206,-13.28321l114.05838,114.05396z" />
+            <path
+              d="M489.98892,362.16209l-185.76332,-185.76554l24.63844,-24.63844l80.56245,80.56134l80.56245,80.56078z" />
+            <path
+              d="M-9.4463,178.88928l47.61633,47.61412l47.61578,47.61356l-11.20518,11.21514l-11.20573,11.2157h44.8412l133.4378,133.44112h-57.02808l-194.07212,-194.0699z" />
+            <path
+              d="M150.84694,23.01898l-93.01787,-93.01898h49.27964l161.40506,161.40838l-12.3242,12.31479l-12.3242,12.31534z" />
+            <path
+              d="M223.93502,256.68379c6.69586,-6.70085 12.30095,-12.18356 12.45653,-12.18356c0.15504,0 42.01623,41.73496 93.02507,92.74435l92.74324,92.74435h-49.27964l-161.1188,-161.12212l12.1736,-12.18301z" />
+            <path
+              d="M-9.4463,23.0223v-24.63954l185.48482,185.4826l-12.31534,12.3242l-12.31479,12.3242l-160.85468,-160.85136v-24.6401z" />
+            <path
+              d="M-9.4463,299.31796v-30.17652l80.28726,80.28504l80.2867,80.2856l-30.03311,0.14341l-30.03256,0.14285l-50.25415,-50.25138l-50.25415,-50.25193v-30.17707z" />
+            <path d="M148.08121,-70h53.15608l133.4378,133.44112h-38.03404l-3.84654,3.7131l-3.84598,3.7131z" />
+            <path
+              d="M187.67779,292.94102l3.57467,-3.60679l140.38116,140.37784l-26.43463,0.14396l-26.43408,0.14396l-133.4522,-133.4522h38.79039l3.57467,-3.60679z" />
+            <path
+              d="M-9.4463,88.63491l140.35792,140.35792l-13.28376,13.29206l-13.28376,13.29262l-113.7904,-113.78596z" />
+            <path
+              d="M490.20154,423.20614l-0.34606,6.7828h-23.39705l-66.30584,-66.30418c-36.46874,-36.46763 -66.55643,-66.74192 -66.55643,-66.9706c0,-0.22923 10.64959,-0.16634 23.36027,-0.16634h23.11023l109.92226,109.90122c0,0 0.27181,15.59796 0.21262,16.7571z" />
+            <path d="M-10,-58.23282v-11.76718h23.53381l133.4378,133.44112h-47.06042l-109.91118,-109.90676v-11.76718z" />
+            <path
+              d="M-9.4463,359.39581l70.32292,70.31628l-31.95721,0.14285l-31.95666,0.14285l-3.2048,-3.17047l-3.20425,-3.17103z" />
+          </g>
+        </g>
+      </svg>
     </div>
 
-    <div
-        class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 transition-colors duration-300">
-        <header
-            class="sticky top-0 z-50 whitespace-nowrap border-b border-gray-200/80 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-            <div class="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
-                <a class="flex items-center gap-3">
-                    <img alt="Xmer™"
-                        src="https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png"
-                        class="block w-12 h-auto" />
-                </a>
-
-                <nav class="hidden md:flex flex-1 justify-center items-center gap-8">
-                    <a class="text-sm font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
-                        href="https://xmeroriginals.com/det-license" data-translate-key="navLicense">License</a>
-                    <a class="text-sm font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
-                        href="#about" data-translate-key="navAbout">About Us</a>
-                    <a class="text-sm font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
-                        href="#projects" data-translate-key="navProjects">Projects</a>
-                    <a class="text-sm font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
-                        href="#contact" data-translate-key="navContact">Contact & Donate</a>
-                </nav>
-
-                <div class="flex items-center gap-2 sm:gap-4">
-                    <div class="flex items-center rounded-full bg-slate-200 dark:bg-slate-800 p-1 text-sm font-medium">
-                        <button id="lang-tr"
-                            class="px-3 py-1 rounded-full text-slate-500 dark:text-slate-400 transition-colors">TR</button>
-                        <button id="lang-en"
-                            class="px-3 py-1 rounded-full bg-primary text-white dark:bg-primary-dark dark:text-black transition-colors">EN</button>
-                    </div>
-
-                    <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu"
-                        aria-label="Toggle menu"
-                        class="flex md:hidden p-2 rounded-lg content-center items-center justify-center bg-slate-200 dark:bg-slate-800 text-gray-900 dark:text-white">
-                        <div class="h-6 w-6 bg-current dark:bg-primary-dark dark:text-black"
-                            style="-webkit-mask-image: url('resources/icons/menu.svg'); mask-image: url('resources/icons/menu.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center;">
-                        </div>
-                    </button>
-                </div>
-            </div>
-
-            <div id="mobile-menu"
-                class="hidden md:hidden absolute top-full left-0 w-full bg-background-light dark:bg-background-dark border-t border-gray-200/80 dark:border-gray-700/50"
-                aria-label="Mobile navigation">
-                <nav class="flex flex-col items-center gap-4 p-6" aria-label="Main navigation">
-                    <a class="text-lg font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
-                        href="https://xmeroriginals.com/det-license" data-translate-key="navLicense">License</a>
-                    <a class="text-lg font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
-                        href="#about" data-translate-key="navAbout">About Us</a>
-                    <a class="text-lg font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
-                        href="#projects" data-translate-key="navProjects">Projects</a>
-                    <a class="text-lg font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
-                        href="#contact" data-translate-key="navContact">Contact & Donate</a>
-                </nav>
-            </div>
-        </header>
-        <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-
-            <main class="flex-1">
-                <section id="home" class="relative pt-12 pb-12 sm:pt-16 sm:pb-24">
-                    <div class="absolute inset-0">
-                        <div class="h-full w-full bg-cover bg-center"
-                            style='background-image: linear-gradient(rgba(47, 62, 77, 0.8) 0%, rgba(29, 43, 57, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5Vu5Q68HAFgZxdCQRspCpV9Y0MQtVdCPyKtEbT40v8jJee_A-3ViczUqNaQMLWXixRia8AtdiuoQU6dimrmj5xPXV6U09y-lK600kIuRdNmIynnO8NJonsgZRylO88Vc2cP4eQ7hXhRCRFaKxwhC8UEU-ul0HhOSNFEg7OmeN2flZbFwzA13H5dq_wRIGJMmG7slFXEn0ajD3uxMNUzYcprzMgZZ2GFa4gTByyafbmX2BJI9p4zyWn1wMEEI-wTn5S0PpotKg2ApG");'>
-                        </div>
-                        <div class="absolute inset-0 bg-background-light/80 dark:bg-background-dark/80"></div>
-                        <div style="width: 100%;">
-                            <div
-                                style="width: 50%; height: 2px; margin: 0 auto; background: linear-gradient(to right, transparent, white, transparent); opacity: 0.8;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <div class="w-full mx-auto">
-                            <img alt="Xmer DET Logo"
-                                src="https://xmeroriginals.com/resources/DET-LOGO-Dark-without-Xmer.png"
-                                class="inline-block  dark:hidden w-64 h-auto" />
-                            <img alt="Xmer DET Logo"
-                                src="https://xmeroriginals.com/resources/DET-LOGO-Light-without-Xmer.png"
-                                class="hidden dark:inline-block w-64 h-auto" />
-                            <h1 class="text-4xl w-full font-bold tracking-tighter text-slate-900 dark:text-white sm:text-5xl md:text-6xl animate-on-scroll"
-                                data-translate-key="heroTitle">
-                                Digital Freedom and Ethical Technology
-                            </h1>
-                            <p class="mt-1 text-lg text-slate-600 dark:text-slate-300 animate-on-scroll delay-100"
-                                data-translate-key="heroSubtitle">
-                                We believe in a more freely accessible future where technology empowers individuals and
-                                respects their rights. Not for money, but for a more reliable internet.
-                            </p>
-                            <div class="mt-10 animate-on-scroll delay-200 flex justify-center gap-4">
-                                <a class="inline-block rounded-lg bg-primary dark:bg-primary-dark px-8 py-3 text-base font-semibold text-white dark:text-black shadow-lg hover:bg-gray-700 dark:hover:bg-slate-300 transition-all duration-300"
-                                    href="#about" data-translate-key="heroButton">
-                                    Learn More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="about" class="py-16 sm:py-24 bg-background-light dark:bg-background-dark">
-                    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="max-w-3xl mx-auto text-center animate-on-scroll">
-                            <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl"
-                                data-translate-key="aboutTitle">About Us</h2>
-                            <p class="mt-1 text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
-                                data-translate-key="aboutText">
-                                At Xmer™ DET, we are committed to developing innovative solutions that promote digital
-                                freedom and uphold ethical standards in technology. Our vision and mission are to create
-                                a new world where personal data belongs to its rightful owners.
-                            </p>
-                        </div>
-
-                        <div class="mt-5 lg:mt-9 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-9">
-                            <div
-                                class="bg-white/50 dark:bg-black/20 p-8 rounded-lg backdrop-blur-sm border border-black/10 dark:border-white/10 animate-on-scroll">
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 dark:bg-primary-dark/10 flex items-center justify-center">
-                                        <div class="h-6 w-6 bg-current dark:bg-primary-dark dark:text-black"
-                                            style="-webkit-mask-image: url('resources/icons/rocket.svg'); mask-image: url('resources/icons/rocket.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center;">
-                                        </div>
-                                    </div>
-                                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white"
-                                        data-translate-key="aboutVisionTitle">
-                                        Our Vision
-                                    </h3>
-                                </div>
-                                <p class="mt-4 text-gray-600 dark:text-gray-400" data-translate-key="aboutVisionText">
-                                    We envision a digital ecosystem where technology serves humanity, protects
-                                    individual freedoms, and operates transparently and ethically. We dream of a digital
-                                    world where every user has full control over their own data.
-                                </p>
-                            </div>
-                            <div
-                                class="bg-white/50 dark:bg-black/20 p-8 rounded-lg backdrop-blur-sm border border-black/10 dark:border-white/10 animate-on-scroll delay-100">
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 dark:bg-primary-dark/10 flex items-center justify-center">
-                                        <div class="h-6 w-6 bg-current dark:bg-primary-dark dark:text-black"
-                                            style="-webkit-mask-image: url('resources/icons/pageless.svg'); mask-image: url('resources/icons/pageless.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center;">
-                                        </div>
-                                    </div>
-                                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white"
-                                        data-translate-key="aboutMissionTitle">
-                                        Our Mission
-                                    </h3>
-                                </div>
-                                <p class="mt-4 text-gray-600 dark:text-gray-400" data-translate-key="aboutMissionText">
-                                    We develop open-source, decentralized, and privacy-respecting tools. Our goal is to
-                                    simplify, liberate, and make technology accessible for everyone, always in favor of
-                                    people.
-                                </p>
-                            </div>
-
-                            <div
-                                class="bg-white/50 dark:bg-black/20 p-8 rounded-lg backdrop-blur-sm border border-black/10 dark:border-white/10 animate-on-scroll delay-200">
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 dark:bg-primary-dark/10 flex items-center justify-center">
-                                        <div class="h-6 w-6 bg-current dark:bg-primary-dark dark:text-black"
-                                            style="-webkit-mask-image: url('resources/icons/heart.svg'); mask-image: url('resources/icons/heart.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center;">
-                                        </div>
-                                    </div>
-                                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white"
-                                        data-translate-key="aboutValuesTitle">
-                                        Our Values
-                                    </h3>
-                                </div>
-                                <p class="mt-4 text-gray-600 dark:text-gray-400" data-translate-key="aboutValuesText">
-                                    Ethics — Technologies that never track users and are free of advertisements.
-                                    Transparency — Open code and auditable processes. Simplicity — Lightweight and
-                                    easy-to-understand tools for every device and every user.
-                                </p>
-                            </div>
-
-                            <div
-                                class="bg-white/50 dark:bg-black/20 p-8 rounded-lg backdrop-blur-sm border border-black/10 dark:border-white/10 animate-on-scroll delay-300">
-                                <div class="flex items-center gap-4">
-                                    <div
-                                        class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 dark:bg-primary-dark/10 flex items-center justify-center">
-                                        <div class="h-6 w-6 bg-current dark:bg-primary-dark dark:text-black"
-                                            style="-webkit-mask-image: url('resources/icons/finance.svg'); mask-image: url('resources/icons/finance.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center;">
-                                        </div>
-                                    </div>
-                                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white"
-                                        data-translate-key="aboutFundingTitle">
-                                        Our Funding Model
-                                    </h3>
-                                </div>
-                                <p class="mt-4 text-gray-600 dark:text-gray-400" data-translate-key="aboutFundingText">
-                                    Our projects are fully independent and run without advertisements; no ads are placed
-                                    in order to protect user privacy. For sustainability, we rely on a donation and
-                                    volunteer support model. We never generate revenue through data sales or privacy
-                                    violations.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="projects" class="py-16 sm:py-24 bg-slate-100 dark:bg-slate-900/50 overflow-hidden">
-                    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="text-center mb-12 md:mb-16 animate-on-scroll">
-                            <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-gray-900 dark:text-white mb-1"
-                                data-translate-key="projectsTitle">Our Projects</h2>
-                            <p class="mt-1 text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
-                                data-translate-key="projectsSubtitle">
-                                Explore the innovative projects we've developed, showcasing our commitment to digital
-                                freedom and ethical technology.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="projects-container"
-                        class="snap-container flex overflow-x-auto gap-8 snap-x snap-mandatory pb-8 -mb-8 px-4 sm:px-6 lg:px-8">
-                    </div>
-                </section>
-
-                <section id="contact" class="relative">
-                    <div class="absolute inset-0 bg-stripes opacity-50 dark:opacity-100"></div>
-                    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-                        <div class="max-w-3xl mx-auto text-center animate-on-scroll">
-                            <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white tracking-tight"
-                                data-translate-key="contactTitle">
-                                Contact Us
-                            </h2>
-                            <p class="mt-1 text-lg text-gray-600 dark:text-gray-400"
-                                data-translate-key="contactSubtitle">
-                                We're here to help. Reach out to us via email or connect with us on social media.
-                            </p>
-                        </div>
-                        <div class="mt-16 lg:mt-9 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-9">
-                            <div
-                                class="bg-white/50 dark:bg-black/20 p-8 rounded-lg backdrop-blur-sm border border-black/10 dark:border-white/10 animate-on-scroll">
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white"
-                                    data-translate-key="contactEmailTitle">
-                                    Email Us
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400" data-translate-key="contactEmailDesc">
-                                    Our team is ready to answer your questions.
-                                </p>
-                                <p class="text-xs text-gray-600 dark:text-gray-400"
-                                    data-translate-key="contactMailWarn">
-                                    Please include your social media tag in your email e.g. "Instagram @xmerdet"
-                                </p>
-
-                                <div class="mt-6 space-y-4">
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200"
-                                            data-translate-key="contactMainTitle">
-                                            Contact
-                                        </h4>
-                                        <a class="text-primary dark:text-primary-dark hover:underline"
-                                            href="mailto:contact@xmeroriginals.com">contact@xmeroriginals.com</a>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200"
-                                            data-translate-key="contactInquiries">
-                                            General Inquiries
-                                        </h4>
-                                        <a class="text-primary dark:text-primary-dark hover:underline"
-                                            href="mailto:support@xmeroriginals.com">support@xmeroriginals.com</a>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200"
-                                            data-translate-key="contactPress">
-                                            Press & Media
-                                        </h4>
-                                        <a class="text-primary dark:text-primary-dark hover:underline"
-                                            href="mailto:press@xmeroriginals.com">press@xmeroriginals.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="bg-white/50 dark:bg-black/20 p-8 rounded-lg backdrop-blur-sm border border-black/10 dark:border-white/10 animate-on-scroll">
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white"
-                                    data-translate-key="supportUsTitle">
-                                    Would you like to support our projects?
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400" data-translate-key="supportUsDesc">
-                                    You can donate or tell us if you have an idea for a Freedom-bringing and Ethical
-                                    app.
-                                </p>
-                                <p class="text-xs text-gray-600 dark:text-gray-400"
-                                    data-translate-key="contactMailWarn">
-                                    Please include your social media tag in your email e.g. "Instagram @xmerdet"
-                                </p>
-                                <div class="mt-6 space-y-4">
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200"
-                                            data-translate-key="donateUs">
-                                            Donate Us
-                                        </h4>
-                                        <a class="text-primary dark:text-primary-dark hover:underline"
-                                            title="Donate to Xmer on BuyMeACoffee"
-                                            href="https://buymeacoffee.com/xmer">buymeacoffee.com/xmer</a>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200"
-                                            data-translate-key="contactIdea">
-                                            I have an Idea
-                                        </h4>
-                                        <a class="text-primary dark:text-primary-dark hover:underline"
-                                            href="mailto:idea@xmeroriginals.com">idea@xmeroriginals.com</a>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200"
-                                            data-translate-key="contactReport">
-                                            Report a bug or any issue
-                                        </h4>
-                                        <a class="text-primary dark:text-primary-dark hover:underline"
-                                            href="mailto:report@xmeroriginals.com">report@xmeroriginals.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="bg-white/50 dark:bg-black/20 p-8 rounded-lg backdrop-blur-sm border border-black/10 dark:border-white/10 animate-on-scroll delay-100">
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white"
-                                    data-translate-key="contactFollowTitle">
-                                    Follow Us
-                                </h3>
-                                <p class="text-gray-600 dark:text-gray-400" data-translate-key="contactFollowDesc">
-                                    Ask us your questions on social media or participate in our surveys.
-                                </p>
-                                <div class="mt-6 grid grid-cols-1 gap-4">
-                                    <a class="flex flex-col items-center gap-2 p-4 rounded-lg bg-gray-900/5 hover:bg-gray-900/10 dark:bg-white/5 dark:hover:bg-white/10 transition-colors group"
-                                        href="https://www.instagram.com/xmerdet" title="Xmer on Instagram">
-                                        <svg class="text-primary dark:text-primary-dark h-6 w-6" aria-hidden="true"
-                                            fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266.058 1.644.07 4.85.07zm0-2.163C8.74 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.267.058 1.675.072 4.947.072s3.68-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.267.072-1.675.072-4.947s-.014-3.68-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z">
-                                            </path>
-                                        </svg>
-                                        <span
-                                            class="text-sm font-medium text-center text-gray-700 dark:text-gray-300">@xmerdet</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </main>
-
-            <footer class="bg-background-light dark:bg-background-dark border-t border-black/10 dark:border-white/10">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <div class="flex flex-col items-center justify-between gap-6">
-                        <div class="flex justify-center gap-6">
-                            <a class="text-gray-500 hover:text-primary dark:hover:text-primary-dark transition"
-                                href="https://www.instagram.com/xmerdet" title="Xmer on Instagram">
-                                <span class="sr-only">Instagram</span>
-                                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266.058 1.644.07 4.85.07zm0-2.163C8.74 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.267.058 1.675.072 4.947.072s3.68-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.267.072-1.675.072-4.947s-.014-3.68-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="mt-8 text-center text-sm text-gray-500" data-translate-key="footerRights">
-                        Xmer™ Digital Freedom and Ethical Technology Community
-                    </p>
-                </div>
-            </footer>
-
+    <div class="loader-bottom">
+      <div class="line-loader"></div>
+      <div style="justify-content: center; text-align: center">
+        <div class="loader-XF">
+          <span class="loader-From">from</span>
+          <span class="loader-Xmer">Xmer™</span>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-body transition-colors duration-300 selection:bg-primary selection:text-white dark:selection:bg-white dark:selection:text-primary">
+    <header
+      class="fixed top-0 w-full z-40 transition-all duration-300 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3 group">
+          <img alt="XmerOriginals" src="https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png"
+            class="w-10 h-auto group-hover:scale-105 transition-transform" />
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="nav-link text-sm font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
+            href="#about" data-translate-key="navAbout">About Us</a>
+          <a class="nav-link text-sm font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
+            href="#det-initiative" data-translate-key="navDet">DET</a>
+          <a class="nav-link text-sm font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
+            href="#projects" data-translate-key="navProjects">Projects</a>
+          <a class="nav-link text-sm font-medium hover:text-primary dark:hover:text-primary-dark transition-colors"
+            href="https://xmeroriginals.com/det-license" data-translate-key="navLicense">License</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <div class="flex items-center rounded-full bg-gray-200 dark:bg-gray-800 p-1">
+            <button id="lang-tr" class="px-3 py-1 text-xs font-bold rounded-full transition-all">
+              TR
+            </button>
+            <button id="lang-en" class="px-3 py-1 text-xs font-bold rounded-full transition-all">
+              EN
+            </button>
+          </div>
+          <a href="#contact"
+            class="hidden sm:inline-block px-4 py-2 text-sm font-semibold text-white bg-primary dark:bg-white dark:text-black rounded-lg hover:opacity-90 transition-opacity"
+            data-translate-key="navContact">Contact</a>
+          <button id="mobile-menu-button"
+            class="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="mobile-menu"
+      class="fixed inset-0 z-50 h-full bg-background-light dark:bg-background-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col">
+      <div class="flex justify-end p-6">
+        <button id="close-menu-button"
+          class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col items-center justify-center flex-grow gap-8">
+        <a class="text-2xl font-display font-bold hover:text-primary dark:hover:text-primary-dark transition-colors"
+          href="#about" data-translate-key="navAbout">About Us</a>
+        <a class="text-2xl font-display font-bold hover:text-primary dark:hover:text-primary-dark transition-colors"
+          href="#det-initiative" data-translate-key="navDet">DET</a>
+        <a class="text-2xl font-display font-bold hover:text-primary dark:hover:text-primary-dark transition-colors"
+          href="#projects" data-translate-key="navProjects">Projects</a>
+        <a class="text-2xl font-display font-bold hover:text-primary dark:hover:text-primary-dark transition-colors"
+          href="https://xmeroriginals.com/det-license" data-translate-key="navLicense">License</a>
+        <a class="text-2xl font-display font-bold text-primary dark:text-primary-dark" href="#contact"
+          data-translate-key="navContact">Contact</a>
+      </nav>
+    </div>
+
+    <main class="relative overflow-hidden pt-20">
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div
+          class="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
+        </div>
+        <div
+          class="absolute top-0 right-1/4 w-96 h-96 bg-purple-400/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+        </div>
+        <div
+          class="absolute -bottom-32 left-1/3 w-96 h-96 bg-pink-400/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000">
+        </div>
+      </div>
+      <section id="home" class="relative min-h-[85vh] flex items-center justify-center px-4">
+        <div class="container mx-auto text-center max-w-4xl z-10">
+          <div class="animate-fade-in-up">
+            <h1 class="flex justify-center mb-2 md:mb-4 lg:mb-7">
+              <img src="https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png"
+                alt="XmerOriginals" class="h-20 md:h-28 lg:h-36 xl:h-44 w-auto drop-shadow-xl duration-500" />
+            </h1>
+
+
+            <p class="text-base sm:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-6 max-w-2xl mx-auto"
+              data-translate-key="heroSubtitle">
+              Building the future of privacy. We create open-source technology
+              that empowers individuals, not corporations.
+            </p>
+            <div class="flex flex-row gap-3 justify-center">
+              <a href="#about"
+                class="px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base rounded-full bg-primary text-white dark:bg-white dark:text-black font-semibold hover:scale-105 transition-transform shadow-lg shadow-primary/20"
+                data-translate-key="heroButton">
+                Discover Our Mission
+              </a>
+              <a href="#projects"
+                class="px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-white/10 font-semibold transition-colors backdrop-blur-sm"
+                data-translate-key="heroProjectButton">
+                View Projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sponsors-section" class="hidden py-24 relative overflow-hidden">
+        <div class="container mx-auto px-4 max-w-6xl relative z-10">
+          <div class="text-center mb-12">
+            <h3 class="font-display text-3xl font-bold mb-4" data-translate-key="sponsorsTitle">Supported By Visionaries
+            </h3>
+            <div class="w-20 h-1.5 bg-accent mx-auto rounded-full"></div>
+          </div>
+          <div id="sponsors-container"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center"></div>
+        </div>
+      </section>
+
+      <section id="about" class="py-24 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="animate-on-scroll">
+              <span class="text-accent font-bold tracking-wider uppercase text-sm mb-2 block"
+                data-translate-key="aboutTag">Who We Are</span>
+              <h2 class="font-display text-4xl sm:text-5xl font-bold mb-6" data-translate-key="aboutTitle">
+                Crafting Ethical Technology
+              </h2>
+              <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed" data-translate-key="aboutText">
+                We don't just build apps; we build alternatives to the surveillance economy. Our mission is to return
+                data
+                ownership to where it belongs: the people.
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-6 mt-8">
+                <div
+                  class="p-6 rounded-2xl bg-white/60 dark:bg-white/5 border border-white/20 shadow-sm backdrop-blur-md">
+                  <h3 class="font-bold text-xl" data-translate-key="valPrivacy">
+                    Privacy First
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400" data-translate-key="valNoTracking">
+                    No tracking, no ads. Ever.
+                  </p>
+                </div>
+                <div
+                  class="p-6 rounded-2xl bg-white/60 dark:bg-white/5 border border-white/20 shadow-sm backdrop-blur-md">
+                  <h3 class="font-bold text-xl" data-translate-key="valOpen">
+                    Open Source
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400" data-translate-key="valTransparent">
+                    Transparent code, auditable by anyone.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative animate-on-scroll delay-200">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl transform rotate-3 opacity-20 dark:opacity-40 blur-lg">
+              </div>
+              <div
+                class="relative bg-white dark:bg-gray-900/90 p-8 sm:p-10 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-2xl">
+                <div class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center mb-6">
+                  <svg class="w-6 h-6 text-gray-700 dark:text-white" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z">
+                    </path>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4" data-translate-key="aboutFundingTitle">
+                  Powered by People
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-6" data-translate-key="aboutFundingText">
+                  We are not driven by profit margins or shareholder value. We
+                  are driven by donations and volunteer contributions. This
+                  ensures our loyalty remains with our users.
+                </p>
+                <a href="https://buymeacoffee.com/xmer" target="_blank"
+                  class="text-primary dark:text-white font-bold hover:underline inline-flex items-center gap-2">
+                  <span data-translate-key="btnSupport">Support Us</span> <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="det-initiative"
+        class="py-24 bg-primary text-white dark:bg-black/40 border-y border-white/10 overflow-hidden relative">
+        <div class="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
+          <h1 class="text-9xl font-display font-bold">DET</h1>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 animate-on-scroll">
+              <div class="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm font-mono mb-6"
+                data-translate-key="detTag">
+                Flagship Initiative
+              </div>
+              <h2 class="font-display text-4xl sm:text-5xl font-bold mb-6" data-translate-key="detTitle">
+                Digital Freedom & Ethical Technology (DET)
+              </h2>
+              <p class="text-gray-300 text-lg mb-8 leading-relaxed" data-translate-key="detDesc">
+                DET is not just a project; it's our manifesto. It is a set of
+                standards and tools designed to reclaim the digital space. We
+                provide licenses, guides, and a framework for what technology
+                *should* be.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a href="https://xmeroriginals.com/det-license"
+                  class="px-6 py-3 rounded-xl bg-white text-black font-bold hover:bg-gray-200 transition-colors"
+                  data-translate-key="btnLicense">
+                  Get DET License
+                </a>
+                <a href="#" id="det-guide-trigger"
+                  class="px-6 py-3 rounded-xl bg-transparent border border-white/30 hover:bg-white/10 transition-colors"
+                  data-translate-key="btnGuide">
+                  Read the Guide
+                </a>
+              </div>
+            </div>
+            <div class="md:w-1/2 w-full animate-on-scroll delay-100">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/5">
+                  <div class="mb-4 text-blue-300">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3">
+                      </path>
+                    </svg>
+                  </div>
+                  <h4 class="font-bold text-lg" data-translate-key="detEthicalLicensing">Ethical Licensing</h4>
+                  <p class="text-xs text-gray-400 mt-2" data-translate-key="detEthicalLicensingDesc">
+                    Legal frameworks to prevent unethical usage of software.
+                  </p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/5 translate-y-8">
+                  <div class="mb-4 text-purple-300">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3.001 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                      </path>
+                    </svg>
+                  </div>
+                  <h4 class="font-bold text-lg" data-translate-key="detAwareness">Awareness</h4>
+                  <p class="text-xs text-gray-400 mt-2" data-translate-key="detAwarenessDesc">
+                    Guides and documentation to educate users.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 animate-on-scroll">
+            <h2 class="font-display text-4xl font-bold" data-translate-key="projectsTitle">
+              Our Projects
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-translate-key="projectsSubtitle">
+              Beyond DET, we build applications that solve real-world problems
+              while respecting your rights.
+            </p>
+          </div>
+          <div id="projects-container"
+            class="snap-container flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory scroll-pl-6"></div>
+        </div>
+      </section>
+
+
+
+      <section id="contact" class="py-24 animated-section-bg relative">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            class="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
+          </div>
+          <div
+            class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+          </div>
+          <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000">
+          </div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="text-center mb-16">
+            <h2 class="font-display text-4xl font-bold mb-4" data-translate-key="contactTitle">
+              Join the Movement
+            </h2>
+            <div class="w-20 h-1.5 bg-accent mx-auto rounded-full"></div>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
+            <div class="grid gap-6">
+              <a href="https://buymeacoffee.com/xmer" target="_blank"
+                class="group flex items-center p-6 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:border-accent/50 dark:hover:border-accent/50 hover:shadow-lg transition-all duration-300">
+                <div
+                  class="w-14 h-14 bg-yellow-100 dark:bg-yellow-900/20 text-yellow-600 rounded-full flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg" data-translate-key="donateTitle">Donate</h3>
+                  <p class="text-sm text-gray-500" data-translate-key="donateDesc">Support our work</p>
+                </div>
+                <div
+                  class="ml-auto opacity-0 group-hover:opacity-100 transform translate-x-3 group-hover:translate-x-0 transition-all">
+                  <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </a>
+
+              <a href="https://www.instagram.com/xmerofficial" target="_blank"
+                class="group flex items-center p-6 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:border-accent/50 dark:hover:border-accent/50 hover:shadow-lg transition-all duration-300">
+                <div
+                  class="w-14 h-14 bg-pink-100 dark:bg-pink-900/20 text-pink-600 rounded-full flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg" data-translate-key="followTitle">Follow Us</h3>
+                  <p class="text-sm text-gray-500">@xmerofficial</p>
+                </div>
+                <div
+                  class="ml-auto opacity-0 group-hover:opacity-100 transform translate-x-3 group-hover:translate-x-0 transition-all">
+                  <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="p-5 sm:p-8 rounded-3xl bg-white dark:bg-gray-900 shadow-2xl border border-gray-100 dark:border-gray-800 relative overflow-hidden">
+              <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl pointer-events-none">
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold mb-6" data-translate-key="contactFormTitle">Send us a message
+              </h3>
+              <div class="flex flex-col gap-3">
+                <button data-email="contact@xmeroriginals.com"
+                  class="contact-email-btn group w-full flex items-center p-3 sm:p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:border-blue-500/50 hover:shadow-lg transition-all duration-300 text-left">
+                  <div
+                    class="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 dark:bg-blue-900/20 text-blue-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="flex-grow min-w-0">
+                    <h3 class="font-bold text-sm sm:text-base break-words" data-translate-key="contactContact">Contact
+                    </h3>
+                    <p class="text-[11px] sm:text-xs text-gray-500 font-mono break-all">contact@xmeroriginals.com</p>
+                  </div>
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-2">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3">
+                      </path>
+                    </svg>
+                  </div>
+                </button>
+
+                <button data-email="support@xmeroriginals.com"
+                  class="contact-email-btn group w-full flex items-center p-3 sm:p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:border-emerald-500/50 hover:shadow-lg transition-all duration-300 text-left">
+                  <div
+                    class="w-8 h-8 sm:w-10 sm:h-10 bg-emerald-100 dark:bg-emerald-900/20 text-emerald-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="flex-grow min-w-0">
+                    <h3 class="font-bold text-sm sm:text-base break-words" data-translate-key="contactSupport">General
+                      Questions</h3>
+                    <p class="text-[11px] sm:text-xs text-gray-500 font-mono break-all">support@xmeroriginals.com</p>
+                  </div>
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-2">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3">
+                      </path>
+                    </svg>
+                  </div>
+                </button>
+
+                <button data-email="press@xmeroriginals.com"
+                  class="contact-email-btn group w-full flex items-center p-3 sm:p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:border-purple-500/50 hover:shadow-lg transition-all duration-300 text-left">
+                  <div
+                    class="w-8 h-8 sm:w-10 sm:h-10 bg-purple-100 dark:bg-purple-900/20 text-purple-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="flex-grow min-w-0">
+                    <h3 class="font-bold text-sm sm:text-base break-words" data-translate-key="contactPress">Press &
+                      Media
+                    </h3>
+                    <p class="text-[11px] sm:text-xs text-gray-500 font-mono break-all">press@xmeroriginals.com</p>
+                  </div>
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-2">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3">
+                      </path>
+                    </svg>
+                  </div>
+                </button>
+
+                <button data-email="idea@xmeroriginals.com"
+                  class="contact-email-btn group w-full flex items-center p-3 sm:p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:border-amber-500/50 hover:shadow-lg transition-all duration-300 text-left">
+                  <div
+                    class="w-8 h-8 sm:w-10 sm:h-10 bg-amber-100 dark:bg-amber-900/20 text-amber-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="flex-grow min-w-0">
+                    <h3 class="font-bold text-sm sm:text-base break-words" data-translate-key="contactIdea">I Have an
+                      Idea
+                    </h3>
+                    <p class="text-[11px] sm:text-xs text-gray-500 font-mono break-all">idea@xmeroriginals.com</p>
+                  </div>
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-2">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3">
+                      </path>
+                    </svg>
+                  </div>
+                </button>
+
+                <button data-email="report@xmeroriginals.com"
+                  class="contact-email-btn group w-full flex items-center p-3 sm:p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:border-red-500/50 hover:shadow-lg transition-all duration-300 text-left">
+                  <div
+                    class="w-8 h-8 sm:w-10 sm:h-10 bg-red-100 dark:bg-red-900/20 text-red-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-grow min-w-0">
+                    <h3 class="font-bold text-sm sm:text-base break-words" data-translate-key="contactReport">Report an
+                      Issue</h3>
+                    <p class="text-[11px] sm:text-xs text-gray-500 font-mono break-all">report@xmeroriginals.com</p>
+                  </div>
+                  <div class="opacity-0 group-hover:opacity-100 transition-opacity ml-2">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3">
+                      </path>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="mt-6 pt-6 border-t border-gray-100 dark:border-gray-800">
+                <p class="text-xs text-gray-500 text-center italic" data-translate-key="contactFootnote">
+                  Please specify your social media username in your email.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="section-separator"></div>
+
+    <footer class="bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 py-12">
+      <div class="container mx-auto px-4 text-center">
+        <div class="flex items-center justify-center gap-2 mb-4 opacity-50 grayscale hover:grayscale-0 transition-all">
+          <img src="https://xmeroriginals.com/resources/XmerOriginals%20Logo%20-%20Klasik%20T2.png"
+            class="h-8 w-auto" />
+        </div>
+        <p class="text-sm text-gray-500">
+          © 2025 XmerOriginals<br>www.xmeroriginals.com
+        </p>
+      </div>
+    </footer>
+
+    <div id="toast-container"
+      class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 translate-y-4">
+      <div
+        class="bg-gray-800 text-white dark:bg-white dark:text-black px-6 py-3 rounded-full shadow-2xl flex items-center gap-2">
+        <svg class="w-5 h-5 text-green-400 dark:text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span id="toast-message" class="font-medium text-sm">Email copied!</span>
+      </div>
     </div>
 
     <script src="src/main.js"></script>
+  </div>
 </body>
 
 </html>
