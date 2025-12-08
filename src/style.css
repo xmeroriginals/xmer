@@ -18,8 +18,7 @@
   font-family: "Special Gothic Expanded One";
   font-style: normal;
   font-weight: 400;
-  src: url("../resources/fonts/SpecialGothicExpandedOne-Regular.ttf")
-    format("truetype");
+  src: url("../resources/fonts/SpecialGothicExpandedOne-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -33,6 +32,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 .snap-container::-webkit-scrollbar {
@@ -44,52 +44,28 @@ html {
   scrollbar-width: none;
 }
 
-.bg-stripes {
-  background-image: linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.05) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.05) 50%,
-    rgba(0, 0, 0, 0.05) 75%,
-    transparent 75%,
-    transparent
-  );
-  background-size: 40px 40px;
+.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
-.dark .bg-stripes {
-  background-image: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.04) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.04) 50%,
-    rgba(255, 255, 255, 0.04) 75%,
-    transparent 75%,
-    transparent
-  );
+.nav-link {
+  position: relative;
 }
 
-.animate-on-scroll {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
 }
 
-.animate-on-scroll.is-visible {
-  opacity: 1;
-}
-
-.delay-100 {
-  transition-delay: 100ms;
-}
-
-.delay-200 {
-  transition-delay: 200ms;
-}
-
-.delay-300 {
-  transition-delay: 300ms;
+.nav-link:hover::after {
+  width: 100%;
 }
 
 #loader {
@@ -134,8 +110,7 @@ html {
 .line-loader {
   width: 100%;
   height: 14px;
-  background: repeating-linear-gradient(-45deg, #fff 0 15px, #0000 0 20px)
-    left/200% 100%;
+  background: repeating-linear-gradient(-45deg, #fff 0 15px, #0000 0 20px) left/200% 100%;
   animation: l3 2s infinite linear;
 }
 
@@ -177,15 +152,48 @@ html {
   opacity: 0.5;
 }
 
-.loader-Alt {
-  font-family: "Lexend Deca", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: clamp(0.5rem, 1vmin, 1.2rem);
-  color: #fff;
-  white-space: nowrap;
+.section-separator {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+  background-size: 200% 100%;
+  animation: separatorGradient 15s linear infinite;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
   position: relative;
-  bottom: 4px;
-  opacity: 0.3;
-  top: -11px;
+  z-index: 20;
+}
+
+@keyframes separatorGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animated-section-bg {
+  background: linear-gradient(-45deg, #ffffff, #f3f4f6, #e5e7eb, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+.dark .animated-section-bg {
+  background: linear-gradient(-45deg, #000000, #111827, #0f172a, #000000);
+  background-size: 400% 400%;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
