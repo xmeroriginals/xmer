@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loader.style.opacity = "0";
     loader.style.visibility = "hidden";
-  }, 200);
+  }, 400);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,168 +12,172 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.getElementById("mobile-menu");
   const langTR = document.getElementById("lang-tr");
   const langEN = document.getElementById("lang-en");
-
   const translations = {
     en: {
-      navLicense: "License",
-      navHome: "Home",
       navAbout: "About Us",
+      navDet: "DET",
       navProjects: "Projects",
-      navContact: "Contact & Donate",
-      heroTitle: "Digital Freedom and Ethical Technology",
+      navLicense: "License",
+      navContact: "Contact",
+      heroBrand: "XmerOriginals",
       heroSubtitle:
-        "We believe in a more freely accessible future where technology empowers individuals and respects their rights. Not for money, but for a more reliable internet.",
-      heroButton: "Learn More",
-      aboutTitle: "About Us",
+        "We believe in a future where technology empowers individuals, not corporations. Building open-source tools for digital freedom.",
+      heroButton: "Our Mission",
+      heroProjectButton: "Explore Projects",
+      aboutTag: "Who We Are",
+      aboutTitle: "Crafting Ethical Technology",
       aboutText:
-        "At Xmer™ DET, we are committed to developing innovative solutions that promote digital freedom and uphold ethical standards in technology. Our vision and mission are to create a new world where personal data belongs to its rightful owners.",
-      aboutVisionTitle: "Our Vision",
-      aboutVisionText:
-        "We envision a digital ecosystem where technology serves humanity, protects individual freedoms, and operates transparently and ethically. We dream of a digital world where every user has full control over their own data.",
-      aboutMissionTitle: "Our Mission",
-      aboutMissionText:
-        "We develop open-source, decentralized, and privacy-respecting tools. Our goal is to simplify, liberate, and make technology accessible for everyone, always in favor of people.",
-      aboutValuesTitle: "Our Values",
-      aboutValuesText:
-        "Ethics — Technologies that never track users and are free of advertisements. Transparency — Open code and auditable processes. Simplicity — Lightweight and easy-to-understand tools for every device and every user.",
-      aboutFundingTitle: "Funding Model",
+        "We don't just build apps; we build alternatives to the surveillance economy. Our mission is to return data ownership to where it belongs: the people.",
+      valPrivacy: "Privacy First",
+      valOpen: "Open Source",
+      aboutFundingTitle: "Powered by People",
       aboutFundingText:
-        "Our projects are fully independent and run without advertisements; no ads are placed in order to protect user privacy. For sustainability, we rely on a donation and volunteer support model. We never generate revenue through data sales or privacy violations.",
+        "We are 100% independent. No ads, no data selling, no investors calling the shots. We rely on donations and community support to keep the internet honest.",
+      detDesc:
+        "DET (Digital Freedom and Ethical Technology) is our flagship initiative. It is a manifesto and a set of tools designed to reclaim the digital space, offering ethical licenses and guides.",
+      btnLicense: "Get License",
+      btnGuide: "Read the Guide",
       projectsTitle: "Our Projects",
       projectsSubtitle:
-        "Explore the innovative projects we've developed, showcasing our commitment to digital freedom and ethical technology.",
-      projectButtonText: "Start Using",
-      contactTitle: "Contact Us",
-      contactSubtitle:
-        "We're here to help. Reach out to us via email or connect with us on social media.",
-      contactEmailTitle: "Email Us",
-      contactEmailDesc: "Our team is ready to answer your questions.",
-      contactMainTitle: "Contact",
-      contactInquiries: "General Inquiries",
-      contactPress: "Press & Media",
-      contactFollowTitle: "Follow Us",
-      contactFollowDesc:
-        "Ask us your questions on social media or participate in our surveys.",
-      footerRights: "Xmer™ Digital Freedom and Ethical Technology Community",
-      supportUsTitle: "Would you like to support our projects?",
-      supportUsDesc:
-        "You can donate or tell us if you have an idea for a Freedom-bringing and Ethical app.",
-      donateUs: "Donate Us",
-      contactIdea: "I have an Idea",
-      contactReport: "Report bug or any issue",
-      metaTitle: "XmerOriginals | Digital Freedom and Ethical Technology",
+        "Ethical and Free projects we develop as XmerOriginals.",
+      projectButtonText: "View Project",
+      contactTitle: "Join the Movement",
+      footerRights:
+        "© 2025 XmerOriginals. Digital Freedom and Ethical Technology Community.",
+      metaTitle: "XmerOriginals | Future of Digital Freedom",
       metaDescription:
-        "Open-source projects and tools that promote digital freedom, privacy and ethical technology. Join, donate or contribute to build a privacy-respecting internet.",
-      contactMailWarn:
-        'Please include your social media tag in your email e.g. "Instagram @xmerdet"',
+        "XmerOriginals is building a privacy-respecting internet through open-source innovation and ethical technology.",
+      juriesTitle: "Distinguished Jury",
+      juriesSubtitle: "Evaluated by industry leaders and privacy advocates.",
+      contactFormTitle: "Send us a message",
+      contactContact: "Contact",
+      contactSupport: "General Questions",
+      contactPress: "Press & Media",
+      contactIdea: "I Have an Idea",
+      contactReport: "Report an Issue",
+      contactFootnote:
+        'Please specify your social media username in your email (e.g. "Instagram @xmerofficial").',
+      emailCopied: "Email copied to clipboard!",
+      guideMetaTitle: "DET Guide | XmerOriginals",
+      guideMetaDescription: "A short guide on how to use technology more consciously.",
       licenseGenTitle: "DET License Generator",
-      licenseGenSubtitle:
-        "Quickly create a Digital Freedom and Ethical Technology (DET) license for your project.",
+      licenseGenSubtitle: "Quickly create a Digital Freedom and Ethical Technology (DET) license for your project.",
       licenseAuthorLabel: "Author / Organization Name",
       licenseAuthorPlaceholder: "e.g., Melek or Xmer™",
       licenseCommercialLabel: "Allow Commercial Use?",
-      licenseCommercialDesc:
-        "If checked, generates DET-C (Allows commercial use) License. If unchecked, generates DET-P (Personal/Commercial not allowed) License.",
+      licenseCommercialDesc: "If checked, generates DET-C (Allows commercial use) License. If unchecked, generates DET-P (Personal/Commercial not allowed) License.",
       licenseGenerateBtn: "Generate License",
       licenseResultTitle: "Your License",
       licenseCopyBtn: "Copy to Clipboard",
       licenseDownloadBtn: "Download as LICENSE file",
+      valNoTracking: "No tracking, no ads. Ever.",
+      valTransparent: "Transparent code, auditable by anyone.",
+      btnSupport: "Support Us",
+      detTag: "Flagship Initiative",
+      detTitle: "Digital Freedom & Ethical Technology (DET)",
+      detEthicalLicensing: "Ethical Licensing",
+      detEthicalLicensingDesc: "Legal frameworks to prevent unethical usage of software.",
+      detAwareness: "Awareness",
+      detAwarenessDesc: "Guides and documentation to educate users.",
+      sponsorsTitle: "Supported By Visionaries",
+      donateTitle: "Donate",
+      donateDesc: "Would you like to support our work?",
+      followTitle: "Follow Us",
       GuideTitle: "DET Guide",
       GuideSubtitle: "A short guide on how to use technology more consciously.",
       GuideHeroTitle:
-        "This guide aims to provide a digestible and intermediate understanding of Digital Freedom and Ethical Technology for general users, focusing on practical steps without delving into excessive details.",
+        "This guide, while not overly exhaustive, aims to provide an easily digestible and mid-level understanding of digital freedom and ethical technology for the general user, focusing on practical steps without overwhelming the reader.",
       GuideHeroDesc:
-        "You can choose the PDF that suits your theme, if you are using Dark mode, you can choose DET Dark Theme Guide PDF, if you want Light, you can choose DET Light Theme Guide PDF.",
-      guideLightBtn: "DET Light Theme Guide PDF",
-      guideDarkBtn: "DET Dark Theme Guide PDF",
+        "You can choose the PDF that suits your theme, if you are using Dark mode, you can choose DET Dark, if you want Light, you can choose DET Light.",
+      guideLightBtn: "DET Light Guide PDF",
+      guideDarkBtn: "DET Dark Guide PDF",
       GuideContentsTitle: "What's in This Guide?",
-      GuideContents: `1. Introduction: Why Digital Security?
-      2. The Gates of Your Digital Castle: The Art of Managing App Permissions
-      3. The Window to Your Digital World: Browser Privacy
-      4. Breaking the Default Chains: Embracing Ethical Alternatives
-      5. Conclusion: Perfect Privacy is a Myth, But a Better Future is Possible
-      `,
+      GuideContents:
+        "Introduction: Why Digital Security?<br> The Gates of Your Digital Castle: The Art of Managing App Permissions<br> The Window to Your Digital World: Browser Privacy<br> Breaking the Default Chains: Embracing Ethical Alternatives<br> Conclusion: Perfect Privacy is a Myth, But a Better Future is Possible",
     },
     tr: {
-      navLicense: "Lisans",
-      navHome: "Ana Sayfa",
       navAbout: "Hakkımızda",
+      navDet: "DET",
       navProjects: "Projeler",
-      navContact: "İletişim & Bağış",
-      heroTitle: "Dijital Özgürlük ve Etik Teknoloji",
+      navLicense: "Lisans",
+      navContact: "İletişim",
+      heroBrand: "XmerOriginals",
       heroSubtitle:
-        "Teknolojinin bireyleri güçlendirdiği ve haklarına saygı duyduğu, daha özgürce erişilebilir bir geleceğe inanıyoruz. Para için değil, daha güvenilir bir internet için.",
-      heroButton: "Daha Fazla Bilgi",
-      aboutTitle: "Hakkımızda",
+        "Teknolojinin şirketleri değil, bireyleri güçlendirdiği bir geleceğe inanıyoruz. Dijital özgürlük için açık kaynaklı araçlar inşa ediyoruz.",
+      heroButton: "Misyonumuz",
+      heroProjectButton: "Projeleri Keşfet",
+      aboutTag: "Biz Kimiz",
+      aboutTitle: "Etik Teknoloji İnşa Ediyoruz",
       aboutText:
-        "Xmer™ DET olarak, dijital özgürlüğü teşvik eden ve teknolojide etik standartları koruyan yenilikçi çözümler geliştirmeye kararlıyız. Hayalimiz ve amacımız birlikte kişisel verilerin sahiplerine ait olduğu yeni bir dünya kurmak.",
-      aboutVisionTitle: "Vizyonumuz",
-      aboutVisionText:
-        "Teknolojinin insanlığa hizmet ettiği, bireysel özgürlükleri koruduğu, şeffaf ve etik bir dijital ekosistem inşa etmek. Her kullanıcının kendi verisi üzerinde tam kontrol sahibi olduğu bir dijital dünya hayal ediyoruz.",
-      aboutMissionTitle: "Misyonumuz",
-      aboutMissionText:
-        "Açık kaynaklı, merkeziyetsiz ve gizliliğe saygılı araçlar geliştiriyoruz. Amacımız, teknolojiyi insanların lehine basitleştirmek, özgürleştirmek ve erişilebilir kılmak.",
-      aboutValuesTitle: "Değerlerimiz",
-      aboutValuesText:
-        "Etik — Kullanıcıyı asla izlemeyen, reklam içermeyen teknolojiler. Şeffaflık — Kodlarımız açık, süreçlerimiz denetlenebilir. Basitlik — Her cihazda, herkes için hafif ve anlaşılır araçlar.",
-      aboutFundingTitle: "Finansman Modelimiz",
+        "Sadece uygulamalar geliştirmiyoruz; gözetleme ekonomisine alternatifler de geliştiriyoruz. Misyonumuz, veri mülkiyetini ait olduğu yere, yani insanlara geri vermek.",
+      valPrivacy: "Önce Gizlilik",
+      valOpen: "Açık Kaynak",
+      aboutFundingTitle: "Gücümüz İnsanlardan",
       aboutFundingText:
-        "Projelerimiz tamamen bağımsız ve reklamsız kalacak şekilde yürütülür; kullanıcı gizliliğini korumak için hiçbir reklam yerleştirilmez. Sürdürülebilirlik için bağış ve gönüllü destek modeli benimsenir. Hiçbir zaman veri satışı veya gizlilik ihlaliyle gelir elde edilmez.",
+        "Tamamen bağımsızız. Reklam yok, veri satışı yok, kararlarımızı yöneten yatırımcılar yok. İnterneti dürüst tutmak için bağışlara ve topluluk desteğine güveniyoruz.",
+      detDesc:
+        "DET (Dijital Özgürlük ve Etik Teknoloji), amiral gemisi girişimimizdir. Dijital alanı geri kazanmak için tasarlanmış bir manifesto, etik lisanslar ve rehberler bütünüdür.",
+      btnLicense: "Lisans Al",
+      btnGuide: "Rehberi Oku",
       projectsTitle: "Projelerimiz",
       projectsSubtitle:
-        "Dijital Özgürlük ve Etik Teknolojiye olan bağlılığımızı sergileyen projelerimizi keşfedin.",
-      projectButtonText: "Kullanmaya Başla",
-      contactTitle: "Bize Ulaşın",
-      contactSubtitle:
-        "Yardım etmek için buradayız. Bize e-posta yoluyla ulaşın veya sosyal medyada bizimle bağlantı kurun.",
-      contactEmailTitle: "E-posta Gönderin",
-      contactEmailDesc: "Ekibimiz sorularınızı yanıtlamaya hazır.",
-      contactMainTitle: "İletişim",
-      contactInquiries: "Genel Sorular",
+        "XmerOriginals olarak geliştirdiğimiz etik ve özgür projeler",
+      projectButtonText: "Projeyi Gör",
+      contactTitle: "Harekete Katıl",
+      footerRights:
+        "© 2025 XmerOriginals. Dijital Özgürlük ve Etik Teknoloji Topluluğu.",
+      metaTitle: "XmerOriginals | Dijital Özgürlüğün Geleceği",
+      metaDescription:
+        "XmerOriginals, açık kaynak inovasyon ve etik teknoloji ile gizliliğe saygılı bir internet inşa ediyor.",
+      juriesTitle: "Seçkin Jürilerimiz",
+      juriesSubtitle: "Sektör liderleri ve gizlilik savunucuları tarafından değerlendirildi.",
+      contactFormTitle: "Bize Mesaj Gönderin",
+      contactContact: "İletişim",
+      contactSupport: "Genel Sorular",
       contactPress: "Basın & Medya",
-      contactFollowTitle: "Bizi Takip Edin",
-      contactFollowDesc:
-        "Sosyal medyada bize sorularınızı sorun veya anketlerimize katılın.",
-      footerRights: "Xmer™ Dijital Özgürlük ve Etik Teknoloji Topluluğu",
-      supportUsTitle: "Projelerimizi desteklemek ister misiniz?",
-      supportUsDesc:
-        "Bağışta bulunabilir veya Özgürlük getiren ve Etik bir uygulama fikriniz varsa bize iletebilirsiniz.",
-      donateUs: "Bize Bağış Yapın",
       contactIdea: "Bir Fikrim Var",
       contactReport: "Hata veya herhangi bir sorunu bildirin",
-      metaTitle: "XmerOriginals | Dijital Özgürlük ve Etik Teknoloji",
-      metaDescription:
-        "Dijital özgürlüğü, gizliliği ve etik teknolojiyi destekleyen açık kaynaklı projeler ve araçlar. Katılın, bağış yapın veya katkıda bulunun.",
-      contactMailWarn:
-        'Lütfen e-postanızda sosyal medya kullanıcı adınızı belirtin örn. "Instagram @xmerdet"',
+      contactFootnote:
+        'Lütfen e-postanızda sosyal medya kullanıcı adınızı belirtin (örn. "Instagram @xmerofficial").',
+      emailCopied: "E-posta panoya kopyalandı!",
+      guideMetaTitle: "DET Rehberi | XmerOriginals",
+      guideMetaDescription: "Teknolojiyi nasıl daha bilinçli kullanacağınıza dair kısa bir rehber.",
       licenseGenTitle: "DET Lisans Oluşturucu",
-      licenseGenSubtitle:
-        "Projeniz için hızlıca bir Dijital Özgürlük ve Etik Teknoloji (DET) lisansı oluşturun.",
+      licenseGenSubtitle: "Projeniz için hızlıca Dijital Özgürlük ve Etik Teknoloji (DET) lisansı oluşturun.",
       licenseAuthorLabel: "Yazar / Organizasyon Adı",
-      licenseAuthorPlaceholder: "örn. Melek veya Xmer™",
-      licenseCommercialLabel: "Ticari Kullanıma İzin Verilsin mi?",
-      licenseCommercialDesc:
-        "İşaretlenirse, DET-C (Ticari kullanıma izin verir) Lisansı oluşturulur. İşaretlenmezse, DET-P (Kişisel/Ticari izin vermez) Lisansı oluşturulur.",
-      licenseGenerateBtn: "Lisansı Oluştur",
+      licenseAuthorPlaceholder: "ör. Melek veya Xmer™",
+      licenseCommercialLabel: "Ticari Kullanıma İzin Ver?",
+      licenseCommercialDesc: "İşaretlenirse, DET-C (Ticari kullanıma izin verir) Lisansı oluşturulur. İşaretlenmezse, DET-P (Kişisel/Ticari olmayan) Lisansı oluşturulur.",
+      licenseGenerateBtn: "Lisans Oluştur",
       licenseResultTitle: "Lisansınız",
       licenseCopyBtn: "Panoya Kopyala",
-      licenseDownloadBtn: "LICENSE olarak İndir",
+      licenseDownloadBtn: "LICENSE dosyası olarak indir",
+      valNoTracking: "Asla takip yok, reklam yok.",
+      valTransparent: "Şeffaf kod, herkes tarafından denetlenebilir.",
+      btnSupport: "Bizi Destekle",
+      detTag: "Amiral Gemisi Girişimi",
+      detTitle: "Dijital Özgürlük & Etik Teknoloji (DET)",
+      detEthicalLicensing: "Etik Lisanslama",
+      detEthicalLicensingDesc:
+        "Yazılımın etik dışı kullanımını önlemek için yasal çerçeveler.",
+      detAwareness: "Farkındalık",
+      detAwarenessDesc: "Kullanıcıları eğitmek için rehberler ve belgeler.",
+      sponsorsTitle: "Vizyonerler Tarafından Destekleniyor",
+      donateTitle: "Bağış Yap",
+      donateDesc: "Çalışmalarımızı desteklemek ister misiniz?",
+      followTitle: "Bizi Takip Et",
       GuideTitle: "DET Rehberi",
       GuideSubtitle:
-        "Teknolojiyi daha bilinçli kullanmak için kısa bir rehber.",
+        "Teknolojiyi nasıl daha bilinçli kullanacağınıza dair kısa bir rehber.",
       GuideHeroTitle:
-        "Bu rehber, genel kullanıcılar için Dijital Özgürlük ve Etik Teknoloji hakkında aşırı detaylara girmeden, pratik adımlara odaklanarak kolayca sindirilebilir ve orta düzeyde bir anlayış sağlamayı amaçlamaktadır.",
+        "Bu rehber, aşırı kapsamlı olmamakla birlikte, genel kullanıcı için dijital özgürlük ve etik teknoloji konusunda kolay anlaşılır ve orta seviyeli bir anlayış sağlamayı, okuyucuyu bunaltmadan pratik adımlara odaklanmayı amaçlamaktadır.",
       GuideHeroDesc:
-        "Tema tercihinize göre PDF seçebilirsiniz, Karanlık modu kullanıyorsanız DET Koyu Tema Rehber PDF'i, Açık modu tercih ediyorsanız DET Açık Tema Rehber PDF'i seçebilirsiniz.",
-      guideLightBtn: "DET Açık Tema Rehber PDF",
-      guideDarkBtn: "DET Koyu Tema Rehber PDF",
-      GuideContentsTitle: "Bu Rehberde Neler Var?",
-      GuideContents: `1. Giriş: Dijital Güvenlik Neden Önemli?
-      2. Dijital Kaleni Korumak: Uygulama İzinlerini Yönetme Sanatı
-      3. Dijital Dünyana Açılan Pencere: Tarayıcı Gizliliği
-      4. Varsayılan Zincirleri Kırmak: Etik Alternatifleri Benimsemek
-      5. Sonuç: Mükemmel Gizlilik Bir Efsane, Ama Daha İyi Bir Gelecek Mümkün
-      `,
+        "Temanıza uygun PDF'i seçebilirsiniz; Karanlık mod kullanıyorsanız DET Dark'ı, Açık mod istiyorsanız DET Light'ı seçebilirsiniz.",
+      guideLightBtn: "DET Light Rehber PDF",
+      guideDarkBtn: "DET Dark Rehber PDF",
+      GuideContentsTitle: "Bu Rehberde Ne Var?",
+      GuideContents:
+        "Giriş: Neden Dijital Güvenlik?<br> Dijital Kalenizin Kapıları: Uygulama İzinlerini Yönetme Sanatı<br> Dijital Dünyaya Açılan Pencere: Tarayıcı Gizliliği<br> Varsayılan Zincirleri Kırmak: Etik Alternatifleri Kucaklamak<br> Sonuç: Mükemmel Gizlilik Bir Mittir, Ama Daha İyi Bir Gelecek Mümkündür",
     },
   };
 
@@ -186,68 +190,71 @@ document.addEventListener("DOMContentLoaded", () => {
         if (el.tagName === "INPUT" && el.hasAttribute("placeholder")) {
           el.placeholder = translations[lang][key];
         } else {
-          el.innerText = translations[lang][key];
+          el.innerHTML = translations[lang][key];
         }
       }
     });
 
     htmlEl.setAttribute("lang", lang);
+    localStorage.setItem("language", lang);
+    const activeClass =
+      "bg-primary text-white dark:bg-white dark:text-black shadow-sm";
+    const inactiveClass =
+      "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white";
 
     if (lang === "tr") {
-      langTR.className =
-        "px-3 py-1 rounded-full bg-primary text-white dark:bg-primary-dark dark:text-black transition-colors";
-      langEN.className =
-        "px-3 py-1 rounded-full text-slate-500 dark:text-slate-400 transition-colors";
+      langTR.className = `px-3 py-1 text-xs font-bold rounded-full transition-all ${activeClass}`;
+      langEN.className = `px-3 py-1 text-xs font-bold rounded-full transition-all ${inactiveClass}`;
     } else {
-      langEN.className =
-        "px-3 py-1 rounded-full bg-primary text-white dark:bg-primary-dark dark:text-black transition-colors";
-      langTR.className =
-        "px-3 py-1 rounded-full text-slate-500 dark:text-slate-400 transition-colors";
+      langEN.className = `px-3 py-1 text-xs font-bold rounded-full transition-all ${activeClass}`;
+      langTR.className = `px-3 py-1 text-xs font-bold rounded-full transition-all ${inactiveClass}`;
     }
-    localStorage.setItem("language", lang);
 
     const metaDesc = document.querySelector('meta[name="description"]');
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    const ogDesc = document.querySelector('meta[property="og:description"]');
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    const canonical = document.querySelector('link[rel="canonical"]');
 
-    if (translations[lang].metaTitle) {
+    if (document.getElementById("GuideDET")) {
+      if (translations[lang].guideMetaTitle) document.title = translations[lang].guideMetaTitle;
+      if (metaDesc && translations[lang].guideMetaDescription) metaDesc.setAttribute("content", translations[lang].guideMetaDescription);
+    } else {
       document.title = translations[lang].metaTitle;
-      if (ogTitle)
-        ogTitle.setAttribute("content", translations[lang].metaTitle);
-    }
-    if (translations[lang].metaDescription) {
       if (metaDesc)
         metaDesc.setAttribute("content", translations[lang].metaDescription);
-      if (ogDesc)
-        ogDesc.setAttribute("content", translations[lang].metaDescription);
     }
-    if (ogUrl)
-      ogUrl.setAttribute(
-        "content",
-        canonical ? canonical.href : window.location.href
-      );
   };
 
-  mobileMenuButton.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    const expanded = mobileMenu.classList.contains("hidden") ? "false" : "true";
-    mobileMenuButton.setAttribute("aria-expanded", expanded);
+  const closeMenuButton = document.getElementById("close-menu-button");
+
+  const toggleMenu = (opening) => {
+    if (opening) {
+      mobileMenu.classList.remove("translate-x-full");
+      document.body.style.overflow = "hidden";
+    } else {
+      mobileMenu.classList.add("translate-x-full");
+      document.body.style.overflow = "";
+    }
+  };
+
+  if (mobileMenuButton) {
+    mobileMenuButton.addEventListener("click", () => toggleMenu(true));
+  }
+
+  if (closeMenuButton) {
+    closeMenuButton.addEventListener("click", () => toggleMenu(false));
+  }
+
+  document.querySelectorAll("#mobile-menu a").forEach((link) => {
+    link.addEventListener("click", () => toggleMenu(false));
   });
 
   const applyTheme = (theme) => {
-    if (theme === "dark") {
-      htmlEl.classList.add("dark");
-    } else {
-      htmlEl.classList.remove("dark");
-    }
+    if (theme === "dark") htmlEl.classList.add("dark");
+    else htmlEl.classList.remove("dark");
   };
   const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
   applyTheme(mediaQuery.matches ? "dark" : "light");
-  mediaQuery.addEventListener("change", (e) => {
-    applyTheme(e.matches ? "dark" : "light");
-  });
+  mediaQuery.addEventListener("change", (e) =>
+    applyTheme(e.matches ? "dark" : "light")
+  );
 
   const initializeAnimations = () => {
     const observer = new IntersectionObserver(
@@ -255,14 +262,22 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
+            entry.target.classList.remove("opacity-0", "translate-y-8");
           }
         });
       },
       { threshold: 0.1 }
     );
-    document
-      .querySelectorAll(".animate-on-scroll")
-      .forEach((element) => observer.observe(element));
+
+    document.querySelectorAll(".animate-on-scroll").forEach((element) => {
+      element.classList.add(
+        "transition-all",
+        "duration-700",
+        "opacity-0",
+        "translate-y-8"
+      );
+      observer.observe(element);
+    });
   };
 
   const loadProjects = (projects, currentLang) => {
@@ -273,186 +288,238 @@ document.addEventListener("DOMContentLoaded", () => {
     let projectsHTML = "";
 
     projects.forEach((project, index) => {
-      translations.en[`project${project.id}Title`] = project.title_en;
-      translations.en[`project${project.id}Desc`] = project.desc_en;
-      translations.tr[`project${project.id}Title`] = project.title_tr;
-      translations.tr[`project${project.id}Desc`] = project.desc_tr;
-      const buttonHTML = project.link
-        ? `
-        <div class="mt-auto pt-4">
-            <a href="${
-              project.link
-            }" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 bg-primary text-white dark:bg-primary-dark dark:text-black rounded-lg hover:bg-opacity-80 transition-colors" data-translate-key="projectButtonText">
-                ${
-                  currentLang === "tr"
-                    ? translations.tr.projectButtonText
-                    : translations.en.projectButtonText
-                }
-            </a>
-        </div>`
-        : "";
+      translations.en[`p${project.id}T`] = project.title_en;
+      translations.en[`p${project.id}D`] = project.desc_en;
+      translations.tr[`p${project.id}T`] = project.title_tr;
+      translations.tr[`p${project.id}D`] = project.desc_tr;
 
       projectsHTML += `
-        <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 animate-on-scroll delay-${
-          index * 100
-        }">
-            <div class="flex flex-col h-full bg-white/50 dark:bg-gray-900/50 border border-white/50 rounded-2xl overflow-hidden transition-all duration-300">
-                <div class="w-full h-48 bg-center bg-no-repeat bg-contain" style='background-image: url("${
-                  project.image
-                }");'></div>
-                <div class="p-6 flex flex-col flex-grow text-center">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white" data-translate-key="project${
-                      project.id
-                    }Title">
-                        ${
-                          currentLang === "tr"
-                            ? project.title_tr
-                            : project.title_en
-                        }
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm flex-grow" data-translate-key="project${
-                      project.id
-                    }Desc">
-                        ${
-                          currentLang === "tr"
-                            ? project.desc_tr
-                            : project.desc_en
-                        }
-                    </p>
-                    ${buttonHTML}
+            <div class="snap-center shrink-0 w-[85vw] sm:w-[400px] animate-on-scroll" style="transition-delay: ${index * 100
+        }ms">
+                <div class="h-full bg-white dark:bg-gray-800/50 rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                    <div class="h-56 bg-gray-100 dark:bg-gray-900/50 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-center bg-contain bg-no-repeat transition-transform duration-500" 
+                             style="background-image: url('${project.image
+        }');"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3" data-translate-key="p${project.id
+        }T">
+                            ${currentLang === "tr"
+          ? project.title_tr
+          : project.title_en
+        }
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow" data-translate-key="p${project.id
+        }D">
+                            ${currentLang === "tr"
+          ? project.desc_tr
+          : project.desc_en
+        }
+                        </p>
+                        ${project.link
+          ? `
+                        <a href="${project.link
+          }" target="_blank" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl font-semibold hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors" data-translate-key="projectButtonText">
+                            ${currentLang === "tr"
+            ? translations.tr.projectButtonText
+            : translations.en.projectButtonText
+          }
+                        </a>`
+          : ""
+        }
+                    </div>
                 </div>
-            </div>
-        </div>`;
+            </div>`;
     });
     container.innerHTML = projectsHTML;
-    initializeAnimations();
+
+    setTimeout(initializeAnimations, 100);
   };
 
-  const initializeLicenseGenerator = () => {
-    const generatorSection = document.getElementById("license-generator");
-    if (!generatorSection) return;
+  const loadSponsors = () => {
+    const sponsorsSection = document.getElementById("sponsors-section");
+    const sponsorsContainer = document.getElementById("sponsors-container");
+    const sponsors = [];
 
-    const generateButton = document.getElementById("generateButton");
-    const authorNameInput = document.getElementById("authorName");
-    const allowCommercialCheckbox = document.getElementById("allowCommercial");
+    if (sponsors.length === 0) return;
+    if (sponsorsSection) sponsorsSection.classList.remove("hidden");
+    let html = "";
+    sponsors.forEach((sponsor) => {
+      html += `
+        <a href="${sponsor.url}" target="_blank" rel="nofollow noopener" 
+           class="group relative flex items-center justify-center p-8 h-32 rounded-3xl bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:border-accent/40 dark:hover:border-accent/40 text-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-accent/5 overflow-hidden backdrop-blur-sm">
+            <div class="absolute inset-0 bg-gradient-to-br from-white via-transparent to-transparent opacity-0 group-hover:opacity-100 dark:from-white/10 transition-opacity duration-500"></div>
+            <div class="relative z-10 transition-all duration-300 group-hover:scale-110">
+                 <img src="${sponsor.logo}" alt="${sponsor.name}" 
+                      class="h-12 w-auto object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 dark:brightness-0 dark:invert dark:group-hover:filter-none dark:group-hover:brightness-100 dark:group-hover:invert-0">
+            </div>
+        </a>
+      `;
+    });
+    if (sponsorsContainer) sponsorsContainer.innerHTML = html;
+  };
+
+  const initGuideLinks = () => {
+    const btn = document.getElementById("det-guide-trigger");
+    if (btn) {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isDark = htmlEl.classList.contains("dark");
+        const url = isDark
+          ? "https://xmeroriginals.com/mid-guide/DET-Dark.pdf"
+          : "https://xmeroriginals.com/mid-guide/DET-Light.pdf";
+        window.open(url, "_blank");
+      });
+    }
+  };
+
+  const showToast = (message) => {
+    const toast = document.getElementById("toast-container");
+    const msgEl = document.getElementById("toast-message");
+    if (!toast || !msgEl) return;
+
+    msgEl.innerText = message;
+    toast.classList.remove("opacity-0", "translate-y-4");
+
+    setTimeout(() => {
+      toast.classList.add("opacity-0", "translate-y-4");
+    }, 3000);
+  };
+
+  const initContactButtons = () => {
+    document.querySelectorAll(".contact-email-btn").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const email = btn.getAttribute("data-email");
+        if (!email) return;
+        try {
+          await navigator.clipboard.writeText(email);
+          const lang = document.documentElement.lang || "en";
+          showToast(translations[lang].emailCopied);
+        } catch (err) {
+          console.error("Failed to copy:", err);
+        }
+        window.location.href = `mailto:${email}`;
+      });
+    });
+  };
+
+  const initLicenseGenerator = () => {
+    const generateBtn = document.getElementById("generateButton");
     const resultContainer = document.getElementById("resultContainer");
-    const licenseTextarea = document.getElementById("licenseText");
-    const copyButton = document.getElementById("copyButton");
-    const downloadButton = document.getElementById("downloadButton");
+    const licenseText = document.getElementById("licenseText");
+    const copyBtn = document.getElementById("copyButton");
+    const downloadBtn = document.getElementById("downloadButton");
+    const authorInput = document.getElementById("authorName");
+    const commercialInput = document.getElementById("allowCommercial");
 
-    const detCLicenseTemplate = `DET-C License v1.0\nCopyright (c) [YEAR] [COPYRIGHT HOLDERS]\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the “Software”), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n1. **Attribution** – The above copyright notice and this permission notice\n   shall be included in all copies or substantial portions of the Software.\n\n2. **Ethical Use** – This Software **may not be used**, directly or indirectly,\n   for any purpose that violates fundamental human rights, promotes violence,\n   causes harm, facilitates surveillance, discrimination, environmental damage,\n   or contributes to unethical, illegal, or deceptive activities — whether\n   explicit or concealed.\n\n3. **Transparency** – Users of this Software are encouraged to disclose when\n   it is used within AI systems, automation, or decision-making processes\n   that affect humans.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.`;
-    const detPLicenseTemplate = `DET-P License v1.0\nCopyright (c) [YEAR] [COPYRIGHT HOLDERS]\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the “Software”), to use,\ncopy, modify, and distribute the Software **for personal, educational, or\nnon-commercial purposes only**, subject to the following conditions:\n\n1. **No Commercial Use** – The Software or any derivative work may not be\n   sold, licensed, rented, or otherwise used for commercial advantage or\n   monetary gain without explicit written permission from the copyright holder.\n\n2. **Attribution** – The above copyright notice and this permission notice\n   shall be included in all copies or substantial portions of the Software.\n\n3. **Ethical Use** – This Software **may not be used**, directly or indirectly,\n   for any purpose that violates fundamental human rights, promotes violence,\n   causes harm, facilitates surveillance, discrimination, environmental damage,\n   or contributes to unethical, illegal, or deceptive activities — whether\n   explicit or concealed.\n\n4. **Transparency** – Users of this Software are encouraged to disclose when\n   it is used within AI systems, automation, or decision-making processes\n   that affect humans.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.`;
+    if (!generateBtn || !resultContainer) return;
 
-    generateButton.addEventListener("click", () => {
-      const authorName = authorNameInput.value.trim() || "[COPYRIGHT HOLDERS]";
-      const isCommercialAllowed = allowCommercialCheckbox.checked;
-      const currentYear = new Date().getFullYear();
-      const template = isCommercialAllowed
-        ? detCLicenseTemplate
-        : detPLicenseTemplate;
-      const finalLicense = template
-        .replace("[YEAR]", currentYear)
-        .replace("[COPYRIGHT HOLDERS]", authorName);
-      licenseTextarea.value = finalLicense;
+    generateBtn.addEventListener("click", () => {
+      const author = authorInput.value.trim() || "[Author Name]";
+      const year = new Date().getFullYear();
+      const isCommercial = commercialInput.checked;
+      const type = isCommercial ? "DET-C" : "DET-P";
+      const commercialClause = isCommercial
+        ? `4. Commercial Use: The Software may be used for commercial purposes.`
+        : `4. Commercial Use: The Software may NOT be used for commercial purposes. Any commercial use requires a separate agreement with the Author.`;
+
+      const text = `
+Digital Freedom and Ethical Technology License (${type}) - v1.0
+
+Copyright (c) ${year} ${author}
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+2. Ethical Use: The Software shall not be used for any purpose that is unethical,
+including but not limited to: violating human rights, promoting discrimination,
+engaging in hate speech, spreading misinformation with malicious intent,
+or developing weapons or technologies that cause harm.
+
+3. Data Privacy: If the Software collects or processes user data, it must do so
+transparently, with user consent, and in a manner that respects user privacy.
+Data collected should be minimized and protected from unauthorized access.
+
+${commercialClause}
+
+5. Openness: Modifications to the Software should, where possible, be shared
+back with the community under the same or a compatible license.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+      `;
+      licenseText.value = text.trim();
       resultContainer.classList.remove("hidden");
+      resultContainer.scrollIntoView({ behavior: "smooth" });
     });
 
-    copyButton.addEventListener("click", () => {
-      navigator.clipboard
-        .writeText(licenseTextarea.value)
-        .then(() => {
-          const originalText = copyButton.innerText;
-          copyButton.innerText = htmlEl.lang === "tr" ? "Kopyalandı" : "Copied";
-          setTimeout(() => {
-            copyButton.innerText = originalText;
-          }, 1000);
-        })
-        .catch((err) => {
-          console.error("Failed to copy: ", err);
-          alert(
-            htmlEl.lang === "tr"
-              ? "Metin panoya kopyalanamadı."
-              : "Could not copy text to clipboard."
-          );
-        });
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(licenseText.value);
+        const lang = document.documentElement.lang || "en";
+        showToast(translations[lang].emailCopied);
+      } catch (err) {
+        console.error("Failed to copy license:", err);
+      }
     });
 
-    downloadButton.addEventListener("click", () => {
-      const licenseContent = licenseTextarea.value;
-      if (!licenseContent) return;
-      const blob = new Blob([licenseContent], { type: "text/markdown" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "LICENSE.md";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    });
-  };
-
-  const initializeDETMidGuide = () => {
-    const generatorSection = document.getElementById("GuideDET");
-    if (!generatorSection) return;
-    const ThemeLightGuide = document.getElementById("themeLightGuide");
-    const ThemeDarkGuide = document.getElementById("themeDarkGuide");
-
-    ThemeLightGuide.addEventListener("click", () => {
-      window.open(
-        "https://xmeroriginals.com/mid-guide/DET-Light.pdf",
-        "_blank"
-      );
-    });
-
-    ThemeDarkGuide.addEventListener("click", () => {
-      window.open("https://xmeroriginals.com/mid-guide/DET-Dark.pdf", "_blank");
+    downloadBtn.addEventListener("click", () => {
+      const blob = new Blob([licenseText.value], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "LICENSE";
+      link.click();
     });
   };
 
   const initializePage = async () => {
     const savedLang = localStorage.getItem("language");
-    const browserLang = navigator.language || navigator.userLanguage;
-    const currentLang =
-      savedLang || (browserLang.startsWith("tr") ? "tr" : "en");
+    const browserLang = navigator.language.slice(0, 2);
+    const currentLang = savedLang || (browserLang === "tr" ? "tr" : "en");
+
+    setLanguage(currentLang);
+    loadSponsors();
+    initContactButtons();
+    initLicenseGenerator();
 
     if (document.getElementById("projects-container")) {
       try {
         const response = await fetch("./projects/projects.json");
-        if (!response.ok) throw new Error("Network response was not ok");
-        let projects = await response.json();
-
-        for (let i = projects.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [projects[i], projects[j]] = [projects[j], projects[i]];
+        if (response.ok) {
+          let projects = await response.json();
+          for (let i = projects.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [projects[i], projects[j]] = [projects[j], projects[i]];
+          }
+          loadProjects(projects, currentLang);
         }
-
-        cachedProjects = projects;
-        loadProjects(projects, currentLang);
       } catch (error) {
-        console.error("Failed to fetch projects:", error);
-        const container = document.getElementById("projects-container");
-        if (container)
-          container.innerHTML =
-            '<p class="text-center text-red-500">Could not load projects.</p>';
+        console.log("Local development or projects not found, skipping.");
       }
     }
 
-    setLanguage(currentLang);
+    initGuideLinks();
     initializeAnimations();
-    initializeLicenseGenerator();
-    initializeDETMidGuide();
   };
 
   langTR.addEventListener("click", () => {
-    const newLang = "tr";
-    setLanguage(newLang);
-    if (cachedProjects.length) loadProjects(cachedProjects, newLang);
+    setLanguage("tr");
   });
   langEN.addEventListener("click", () => {
-    const newLang = "en";
-    setLanguage(newLang);
-    if (cachedProjects.length) loadProjects(cachedProjects, newLang);
+    setLanguage("en");
   });
 
   initializePage();
