@@ -25,5 +25,14 @@
     "title_tr": "DET Orta Seviye Rehber",
     "desc_tr": "Teknolojiyi daha bilinçli kullanma hakkında kısa bir rehber.",
     "link": "https://xmeroriginals.com/det-mid-guide"
+  },
+  {
+    "id": 4,
+    "image": "https://xmeroriginals.com/resources/projects-thumbs/EasyLock-Thumb.png",
+    "title_en": "EasyLock | Program",
+    "desc_en": "Secure your files in seconds.",
+    "title_tr": "EasyLock | Uygulama",
+    "desc_tr": "Dosyalarınızı saniyeler içinde güvenli hale getirin.",
+    "link": "https://easylock.xmeroriginals.com/"
   }
 ]
