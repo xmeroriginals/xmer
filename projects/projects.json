@@ -19,15 +19,6 @@
   },
   {
     "id": 3,
-    "image": "https://xmeroriginals.com/resources/projects-thumbs/DET-MidLevelGuide.png",
-    "title_en": "DET Mid-Level Guide",
-    "desc_en": "A short guide on how to use technology more consciously.",
-    "title_tr": "DET Orta Seviye Rehber",
-    "desc_tr": "Teknolojiyi daha bilinçli kullanma hakkında kısa bir rehber.",
-    "link": "https://xmeroriginals.com/det-mid-guide"
-  },
-  {
-    "id": 4,
     "image": "https://xmeroriginals.com/resources/projects-thumbs/EasyLock-Thumb.png",
     "title_en": "EasyLock | Program",
     "desc_en": "The quickest way to instantly encrypt and secure your important files before uploading them to a cloud service. Right-click, set a password, and encrypt.",
