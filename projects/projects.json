@@ -25,5 +25,14 @@
     "title_tr": "EasyLock | Uygulama",
     "desc_tr": "Önemli dosyalarınızı bulut hizmetine yüklemeden önce anında şifrelemenin ve güvenliğini sağlamanın en hızlı yolu. Sağ tıklayın, bir parola belirleyin ve şifreleyin.",
     "link": "https://easylock.xmeroriginals.com/"
+  },
+  {
+    "id": 4,
+    "image": "https://xmeroriginals.com/resources/projects-thumbs/SharePeer-Thumb.png",
+    "title_en": "SharePeer | Web Program",
+    "desc_en": "Send all your files, regardless of importance/triviality or size/smallness, to the target user quickly and securely via P2P technology, without an intermediary server, at no cost.",
+    "title_tr": "SharePeer | Web Uygulaması",
+    "desc_tr": "Hiçbir ücret ödemeden Önemli/Önemsiz Büyük/Küçük tüm dosyalarınızı arada sunucu olmadan hedef kullanıcıya P2P teknolojisi ile hızlıca güvenle gönderin.",
+    "link": "https://sharepeer.xmeroriginals.com/"
   }
 ]
