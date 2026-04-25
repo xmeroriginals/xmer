@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       projectButtonText: "View Project",
       contactTitle: "Join the Movement",
       footerRights:
-        "© 2025 XmerOriginals. Digital Freedom and Ethical Technology Community.",
+        "© 2026 XmerOriginals. Digital Freedom and Ethical Technology Community.",
       metaTitle: "XmerOriginals | Future of Digital Freedom",
       metaDescription:
         "XmerOriginals is building a privacy-respecting internet through open-source innovation and ethical technology.",
@@ -59,13 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
         'Please specify your social media username in your email (e.g. "Instagram @xmerofficial").',
       emailCopied: "Email copied to clipboard!",
       guideMetaTitle: "DET Guide | XmerOriginals",
-      guideMetaDescription: "A short guide on how to use technology more consciously.",
+      guideMetaDescription:
+        "A short guide on how to use technology more consciously.",
       licenseGenTitle: "DET License Generator",
-      licenseGenSubtitle: "Quickly create a Digital Freedom and Ethical Technology (DET) license for your project.",
+      licenseGenSubtitle:
+        "Quickly create a Digital Freedom and Ethical Technology (DET) license for your project.",
       licenseAuthorLabel: "Author / Organization Name",
       licenseAuthorPlaceholder: "e.g., Melek or Xmer™",
       licenseCommercialLabel: "Allow Commercial Use?",
-      licenseCommercialDesc: "If checked, generates DET-C (Allows commercial use) License. If unchecked, generates DET-P (Personal/Commercial not allowed) License.",
+      licenseCommercialDesc:
+        "If checked, generates DET-C (Allows commercial use) License. If unchecked, generates DET-P (Personal/Commercial not allowed) License.",
       licenseGenerateBtn: "Generate License",
       licenseResultTitle: "Your License",
       licenseCopyBtn: "Copy to Clipboard",
@@ -76,7 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
       detTag: "Flagship Initiative",
       detTitle: "Digital Freedom & Ethical Technology (DET)",
       detEthicalLicensing: "Ethical Licensing",
-      detEthicalLicensingDesc: "Legal frameworks to prevent unethical usage of software.",
+      detEthicalLicensingDesc:
+        "Legal frameworks to prevent unethical usage of software.",
       detAwareness: "Awareness",
       detAwarenessDesc: "Guides and documentation to educate users.",
       sponsorsTitle: "Supported By Visionaries",
@@ -125,12 +129,13 @@ document.addEventListener("DOMContentLoaded", () => {
       projectButtonText: "Projeyi Gör",
       contactTitle: "Harekete Katıl",
       footerRights:
-        "© 2025 XmerOriginals. Dijital Özgürlük ve Etik Teknoloji Topluluğu.",
+        "© 2026 XmerOriginals. Dijital Özgürlük ve Etik Teknoloji Topluluğu.",
       metaTitle: "XmerOriginals | Dijital Özgürlüğün Geleceği",
       metaDescription:
         "XmerOriginals, açık kaynak inovasyon ve etik teknoloji ile gizliliğe saygılı bir internet inşa ediyor.",
       juriesTitle: "Seçkin Jürilerimiz",
-      juriesSubtitle: "Sektör liderleri ve gizlilik savunucuları tarafından değerlendirildi.",
+      juriesSubtitle:
+        "Sektör liderleri ve gizlilik savunucuları tarafından değerlendirildi.",
       contactFormTitle: "Bize Mesaj Gönderin",
       contactContact: "İletişim",
       contactSupport: "Genel Sorular",
@@ -141,13 +146,16 @@ document.addEventListener("DOMContentLoaded", () => {
         'Lütfen e-postanızda sosyal medya kullanıcı adınızı belirtin (örn. "Instagram @xmerofficial").',
       emailCopied: "E-posta panoya kopyalandı!",
       guideMetaTitle: "DET Rehberi | XmerOriginals",
-      guideMetaDescription: "Teknolojiyi nasıl daha bilinçli kullanacağınıza dair kısa bir rehber.",
+      guideMetaDescription:
+        "Teknolojiyi nasıl daha bilinçli kullanacağınıza dair kısa bir rehber.",
       licenseGenTitle: "DET Lisans Oluşturucu",
-      licenseGenSubtitle: "Projeniz için hızlıca Dijital Özgürlük ve Etik Teknoloji (DET) lisansı oluşturun.",
+      licenseGenSubtitle:
+        "Projeniz için hızlıca Dijital Özgürlük ve Etik Teknoloji (DET) lisansı oluşturun.",
       licenseAuthorLabel: "Yazar / Organizasyon Adı",
       licenseAuthorPlaceholder: "ör. Melek veya Xmer™",
       licenseCommercialLabel: "Ticari Kullanıma İzin Ver?",
-      licenseCommercialDesc: "İşaretlenirse, DET-C (Ticari kullanıma izin verir) Lisansı oluşturulur. İşaretlenmezse, DET-P (Kişisel/Ticari olmayan) Lisansı oluşturulur.",
+      licenseCommercialDesc:
+        "İşaretlenirse, DET-C (Ticari kullanıma izin verir) Lisansı oluşturulur. İşaretlenmezse, DET-P (Kişisel/Ticari olmayan) Lisansı oluşturulur.",
       licenseGenerateBtn: "Lisans Oluştur",
       licenseResultTitle: "Lisansınız",
       licenseCopyBtn: "Panoya Kopyala",
@@ -213,8 +221,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const metaDesc = document.querySelector('meta[name="description"]');
 
     if (document.getElementById("GuideDET")) {
-      if (translations[lang].guideMetaTitle) document.title = translations[lang].guideMetaTitle;
-      if (metaDesc && translations[lang].guideMetaDescription) metaDesc.setAttribute("content", translations[lang].guideMetaDescription);
+      if (translations[lang].guideMetaTitle)
+        document.title = translations[lang].guideMetaTitle;
+      if (metaDesc && translations[lang].guideMetaDescription)
+        metaDesc.setAttribute(
+          "content",
+          translations[lang].guideMetaDescription,
+        );
     } else {
       document.title = translations[lang].metaTitle;
       if (metaDesc)
@@ -253,31 +266,51 @@ document.addEventListener("DOMContentLoaded", () => {
   const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
   applyTheme(mediaQuery.matches ? "dark" : "light");
   mediaQuery.addEventListener("change", (e) =>
-    applyTheme(e.matches ? "dark" : "light")
+    applyTheme(e.matches ? "dark" : "light"),
   );
 
+  let scrollObserver;
   const initializeAnimations = () => {
-    const observer = new IntersectionObserver(
+    if (scrollObserver) scrollObserver.disconnect();
+
+    scrollObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
             entry.target.classList.remove("opacity-0", "translate-y-8");
+
+            if (entry.target.id === "projects-container") {
+              const cards = entry.target.querySelectorAll(".animate-on-scroll");
+              cards.forEach((card, i) => {
+                setTimeout(() => {
+                  card.classList.add("is-visible");
+                  card.classList.remove("opacity-0", "translate-y-8");
+                }, i * 100);
+              });
+            }
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     document.querySelectorAll(".animate-on-scroll").forEach((element) => {
-      element.classList.add(
-        "transition-all",
-        "duration-700",
-        "opacity-0",
-        "translate-y-8"
-      );
-      observer.observe(element);
+      if (!element.classList.contains("is-visible")) {
+        element.classList.add(
+          "transition-all",
+          "duration-700",
+          "opacity-0",
+          "translate-y-8",
+        );
+      }
+      scrollObserver.observe(element);
     });
+
+    const projectsContainer = document.getElementById("projects-container");
+    if (projectsContainer) {
+      scrollObserver.observe(projectsContainer);
+    }
   };
 
   const loadProjects = (projects, currentLang) => {
@@ -294,47 +327,84 @@ document.addEventListener("DOMContentLoaded", () => {
       translations.tr[`p${project.id}D`] = project.desc_tr;
 
       projectsHTML += `
-            <div class="snap-center shrink-0 w-[85vw] sm:w-[400px] animate-on-scroll" style="transition-delay: ${index * 100
-        }ms">
+            <div class="snap-center shrink-0 w-[80vw] sm:w-[400px] animate-on-scroll" data-project-index="${index}" style="transition-delay: ${
+              index * 100
+            }ms">
                 <div class="h-full bg-white dark:bg-gray-800/50 rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
                     <div class="h-56 bg-gray-100 dark:bg-gray-900/50 relative overflow-hidden">
                         <div class="absolute inset-0 bg-center bg-contain bg-no-repeat transition-transform duration-500" 
-                             style="background-image: url('${project.image
-        }');"></div>
+                             style="background-image: url('${
+                               project.image
+                             }');"></div>
                     </div>
                     <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3" data-translate-key="p${project.id
-        }T">
-                            ${currentLang === "tr"
-          ? project.title_tr
-          : project.title_en
-        }
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3" data-translate-key="p${
+                          project.id
+                        }T">
+                            ${
+                              currentLang === "tr"
+                                ? project.title_tr
+                                : project.title_en
+                            }
                         </h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow" data-translate-key="p${project.id
-        }D">
-                            ${currentLang === "tr"
-          ? project.desc_tr
-          : project.desc_en
-        }
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow" data-translate-key="p${
+                          project.id
+                        }D">
+                            ${
+                              currentLang === "tr"
+                                ? project.desc_tr
+                                : project.desc_en
+                            }
                         </p>
-                        ${project.link
-          ? `
-                        <a href="${project.link
-          }" target="_blank" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl font-semibold hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors" data-translate-key="projectButtonText">
-                            ${currentLang === "tr"
-            ? translations.tr.projectButtonText
-            : translations.en.projectButtonText
-          }
+                        ${
+                          project.link
+                            ? `
+                        <a href="${
+                          project.link
+                        }" target="_blank" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-xl font-semibold hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors" data-translate-key="projectButtonText">
+                            ${
+                              currentLang === "tr"
+                                ? translations.tr.projectButtonText
+                                : translations.en.projectButtonText
+                            }
                         </a>`
-          : ""
-        }
+                            : ""
+                        }
                     </div>
                 </div>
             </div>`;
     });
     container.innerHTML = projectsHTML;
 
-    setTimeout(initializeAnimations, 100);
+    setTimeout(() => {
+      initializeAnimations();
+
+      const pagination = document.getElementById("projects-pagination");
+      if (pagination) {
+        pagination.innerHTML = projects
+          .map(
+            (_, i) => `
+                <div class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 transition-all duration-300 ${i === 0 ? "w-6 bg-primary dark:bg-white" : ""}" data-dot-index="${i}"></div>
+            `,
+          )
+          .join("");
+
+        container.addEventListener("scroll", () => {
+          const index = Math.round(
+            container.scrollLeft / (container.clientWidth * 0.8),
+          );
+          document.querySelectorAll("[data-dot-index]").forEach((dot, i) => {
+            if (i === index) {
+              dot.classList.add("w-6", "bg-primary", "dark:bg-white");
+              dot.classList.remove("w-2", "bg-gray-300", "dark:bg-gray-600");
+            } else {
+              dot.classList.remove("w-6", "bg-primary", "dark:bg-white");
+              dot.classList.add("w-2", "bg-gray-300", "dark:bg-gray-600");
+            }
+          });
+        });
+      }
+    }, 100);
   };
 
   const loadSponsors = () => {
